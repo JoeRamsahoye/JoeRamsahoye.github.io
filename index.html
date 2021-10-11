@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- ///////////////////  HEAD //////////////////////////////////// -->
+
+<head>
+<!--Here I am linking my CSS file-->   
+    <link rel="stylesheet" href="indexstyle2.css">
+
+<!--The next three lines allow the Vega embed-->
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+</head>
+
+<!-- ///////////////////  HEAD //////////////////////////////////// -->
+
+
+
+<!-- ///////////////////  START BODY //////////////////////////////////// -->
+
+<body>
+    <header>
+        <h1>Data Science 2021</h1>
+        <h3>by Joe Ramsahoye</h3>
+        <h3>Covid-19</h3>
+        <p>Chart 1 tracks Covid-19 cases by UK region.</p>
+        </div>
+    </header>
+
+<!--Chart 1 -->
+  <div class="chart" id="chart1">
+      <script>
+        var myChart1 = "chart1_covidUKRegions.json";
+        vegaEmbed('#chart1', myChart1);
+      </script>
+  </div>
+
+<!--Chart 2 -->
+        <h3>Productvity Time Series</h3>
+        <p>Chart 2 looks at Productivity in the UK.</p>
+<div class="chart" id="chart2">
+    <script>
+      var myChart2 = "chart2_ukProductivity.json";
+      vegaEmbed('#chart2', myChart2);
+    </script>
+</div>
+
+<!--Chart 3 -->
+        <h3>Ethereum</h3>
+        <p>Chart 3 looks at the long-run Ethereum price.</p>
+<div class="chart" id="chart3">
+      <script>
+        var myChart3 = "chartcrypto3.json";
+        vegaEmbed('#chart3', myChart3);
+      </script>
+  </div>
+
+<!--Chart 4 -->
+        <h3>My live chart with new cases by publish date data</h3>
+        <p>Chart 4 looks at new Covid cases in Bristol.</p>
+<div class="chart" id="chart4">
+        <script>
+         var myChart4 = "MyCovidDataAPIChart.json";
+         vegaEmbed('#chart4', myChart4);
+            </script>
+</div>
+
+<!--Chart 5 -->
+        <h3>My Vaccination Data chart.</h3>
+        <p>Chart 5 looks at first dose vaccinations in... .</p>
+<div class="chart" id="chart5">
+        <script>
+        var myChart4 = "MyVaccinationDataChart.json";
+        vegaEmbed('#chart5', myChart5);
+            </script> 
+</div>
+
+
+</body>
+<!-- ///////////////////  END BODY //////////////////////////////////// -->
+
+</html>
