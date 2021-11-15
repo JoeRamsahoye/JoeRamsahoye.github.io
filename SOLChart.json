@@ -1,0 +1,42 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    
+    "title": {
+      "text": "Solano Price",
+      "subtitle":"Price at close (USD), Source: CoinAPI.io",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+    
+     "data": {
+      "url": "https://raw.githubusercontent.com/on19193/on19193.github.io/main/data_ohlcv_SOL.json"
+    },
+    
+    "height": 300,
+    "width": 300,
+     
+    "mark": {"type": "line", 
+    "point": false,
+    "clip": true,
+    "color": "blue"
+    },
+   
+    "encoding": {
+  
+      "x": {
+        "field": "time_period_start",
+        "type": "temporal",
+        "title": null,
+        "axis": {"grid": false}
+      },
+  
+      "y": {
+        "field": "price_close",
+        "type": "quantitative",
+        "title": null,
+        "axis": {"grid": false}
+      }
+  }
+  }
