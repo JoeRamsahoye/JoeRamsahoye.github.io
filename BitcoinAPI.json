@@ -9,7 +9,7 @@
         "anchor": "start"
     },
     "data": {
-        "url": "https://rest.coinapi.io/v1/ohlcv/BTC/GBP/history?period_id=7DAY&time_start=2021-01-01T00:00:00&limit=100&include_empty_items=false&apikey=106B85AF-AE05-4CC0-8C31-1FE1E3FC8C56",
+        "url": "https://rest.coinapi.io/v1/ohlcv/XRP/GBP/history?period_id=7DAY&time_start=2021-01-01T00:00:00&limit=100&include_empty_items=false&apikey=106B85AF-AE05-4CC0-8C31-1FE1E3FC8C56",
         "format": { "type": "json" }
     },
     "height": 300,
