@@ -1,0 +1,132 @@
+body {
+    background-color: #0d84b3;
+    max-width: auto;
+    margin: auto;
+}
+
+footer {
+    height: 100px
+}
+
+header {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 80px; 
+    font-weight: bold;
+    letter-spacing: 1px; 
+    line-height: 1; 
+    text-align: center;  
+}
+
+.title1 {
+    /*font-family: 'Helvetica Neue', sans-serif;*/
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    color: #ffffff;
+    font-size: 20px; 
+    letter-spacing: 1px; 
+    line-height: 1; 
+    text-align: center;
+}
+
+.bold {
+    font-weight:bold
+}
+
+.white {
+    color: #ffff;
+}
+
+.red {
+    color: #e61717;
+}
+
+.chart {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    padding: 5px;
+    background-color: White;
+    border: #e61717 solid 5px;
+    border-radius: 10px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 10pxp;
+}
+
+.container {
+    background-colour: #264653;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Add animation to fade in charts */
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+    display: none;
+    text-align: center;
+}
+
+/* Button code */
+.button-74 {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-74:hover {
+  background-color: #fff;
+}
+
+.button-74:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
