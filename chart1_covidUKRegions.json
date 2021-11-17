@@ -60,11 +60,11 @@
   ],
 
   "encoding": {
-    "x": {"field": "date", "type": "temporal", "title": null},
+    "x": {"field": "date", "type": "temporal", "title": "Month"},
     "y": {
       "field": "newCasesByPublishDate",
       "type": "quantitative",
-      "title": null
+      "title": "Number of cases"
     },
     
       

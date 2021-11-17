@@ -20,14 +20,14 @@
     "type": "line",
     "point": false,
     "interpolate": "monotone",
-    "color": "blueviolet"
+    "color": "#051077"
   },
   "encoding": {
     "x": {
       "field": "Date",
       "type": "temporal",
       "axis": {
-        "title": null,
+        "title": "Year",
         "grid": false,
         "labelSeparation": 20,
         "ticks": false
@@ -36,7 +36,7 @@
     "y": {
       "field": "Value",
       "type": "quantitative",
-      "title": "",
+      "title": "Output per hour worked",
       "axis": {"grid": false}
     }
   }

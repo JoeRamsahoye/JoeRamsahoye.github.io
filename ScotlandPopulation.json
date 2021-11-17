@@ -21,11 +21,11 @@
         "type": "line",
         "point": false,
         "interpolate": "monotone",
-        "color": "blueviolet"
+        "color": "#051077"
     },
     "encoding": {
         "x": {
-            "field": "Year ",
+            "field": "Year",
             "type": "temporal",
             "axis": {
                 "title": "Year",

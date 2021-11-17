@@ -8,18 +8,18 @@
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
     "anchor": "start",
-    "color": "#179fdb",
-    "subtitleColor":"#179fdb"},
+    "color": "black",
+    "subtitleColor":"black"},
 
   "config": {
-    "background":"#122b39",
+    "background":"#ffffff",
     "view": {
       "stroke": "transparent"}},
  
 
 
-    "width":300,
-    "height":300,
+    "width":260,
+    "height":260,
 
 
     "data": {
@@ -31,7 +31,7 @@
     "type": "line",
     "point": false,
     "interpolate": "linear",
-    "color":"hotpink"
+    "color":"#051077"
   },
 
   "transform": [
@@ -74,11 +74,11 @@
       "field": "Date",
       "type": "temporal",
       "axis": {
-        "title": null,
+        "title": "Year",
         "grid": false,
         "labelSeparation": 10,
         "domainColor":"dimgrey",
-        "labelColor":"#00a767",
+        "labelColor":"black",
         "tickColor":"pink",
         "gridColor":"dimgrey"
       }},
@@ -86,11 +86,11 @@
     "y": {
       "field": "Price",
       "type": "quantitative",
-      "title": "",
+      "title": "Price",
       "axis": {
         "grid": false,
         "domainColor":"dimgrey",
-        "labelColor":"#00a767",
+        "labelColor":"black",
         "tickColor":"pink",
         "gridColor":"dimgrey",
         "format":"$,.5"}

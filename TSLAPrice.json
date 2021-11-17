@@ -21,7 +21,7 @@
   "mark": {"type": "line", 
   "point": false,
   "clip": true,
-  "color": "#f4c245"
+  "color": "#051077"
   },
  
   "encoding": {
@@ -29,7 +29,7 @@
     "x": {
       "field": "timestamp",
       "type": "temporal",
-      "title": null,
+      "title": "Year",
       "axis": {"grid": false},
       "scale": {"domainMin": {"year": 2011, "month": "jan", "date": 1}}
     },
@@ -37,9 +37,9 @@
     "y": {
       "field": "close",
       "type": "quantitative",
-      "title": null,
+      "title": "Price at close ($)",
       "axis": {"grid": false},
-      "scale": {"domain": [0,1300]}
+      "scale": {"domain": [0,2500]}
     }
 }
 }
