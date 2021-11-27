@@ -90,6 +90,28 @@ header {
   transform: translate(2px, 2px);
 }
 
+.button-74-clicked {
+  background-color: #ffffff;
+  border: 2px solid #051077;
+  border-radius: 30px;
+  box-shadow: #422800 2px 2px 0 0;
+  color: #000000;
+  cursor: url(https://cur.cursors-4u.net/symbols/sym-1/sym46.cur), auto !important;
+  margin: 3px;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  transform: translate(2px, 2px);
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+
 @media (min-width: 768px) {
   .button-74 {
     min-width: 120px;
