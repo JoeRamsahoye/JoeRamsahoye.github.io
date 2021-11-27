@@ -1,0 +1,181 @@
+
+<!-- Richard Davies, Data Science 2021 -->
+
+
+<!-- ///////////////////  HEAD //////////////////////////////////// -->
+
+<head>
+
+    <!--The next three lines allow the Vega embed-->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+  
+    <!-- CSS -->
+    <link rel="stylesheet" href="METAstyle.css">
+  
+    <!-- Tab name -->
+    <title>Joe Ramsahoye</title>
+    
+  </head>
+  
+  <!-- ///////////////////  HEAD //////////////////////////////////// -->
+  
+  
+  
+  <!-- ///////////////////  START BODY //////////////////////////////////// -->
+  <body onload="myFunction()"> 
+  
+    <header><span class="White">Data</span><span class="Red">Science</span></header>
+    
+    <div class="container">
+      <button class="button-74" onclick="location.href='https://joeramsahoye.github.io'">Home</button>
+      <button class="button-74" onclick="location.href='https://joeramsahoye.github.io/porfolio.html'">Porfolio</button>
+      <button class="button-74" onclick="location.href='https://joeramsahoye.github.io/project.html'">Project</button>
+      <button class="button-74" onclick="location.href='https://github.com/joeramsahoye/joeramsahoye.github.io'">Github</button>
+      <button class="button-74" onclick="location.href='https://rapidcharts.io/datascience'">RapidCharts</button>
+    </div>
+    
+    <p class=title1><span class="bold">Week 1 - Introduction to HTML</span></p>
+  
+    <div class="container">
+  
+      <!--Chart 1 -->
+      <div class="chart" id="chart1">
+        <script>
+          var myChart1 = "chart1_covidUKRegions.json";
+          vegaEmbed('#chart1', myChart1);
+        </script>
+      </div>
+  
+      <!--Chart 2 -->
+      <div class="chart" id="chart2">
+        <script>
+          var myChart2 = "chart2_ukProductivity.json";
+          vegaEmbed('#chart2', myChart2);
+        </script>
+      </div>
+  
+      <!-- Chart 3 -->
+      <div class="chart" id="chart3">
+        <script>
+          var myChart3 = "chartcrypto3.json";
+          vegaEmbed('#chart3', myChart3);
+        </script>
+      </div>
+  
+    </div>
+  
+    <p class=title1><span class="bold">Week 2 - Hosting Data</span></p>
+  
+    <div class="container">
+  
+      <!--Chart 4-->
+      <div class="chart" id="chart4">
+        <script>
+          var myChart4 = "MyCovidDataAPIChart.json";
+          vegaEmbed('#chart4', myChart4);
+        </script>
+      </div>
+  
+      <!--Chart 5-->
+      <div class="chart" id="chart5">
+        <script>
+          var myChart5 = "MyCovidDeathsDataChart.json";
+          vegaEmbed('#chart5', myChart5);
+        </script>
+      </div>
+  
+    </div>
+    
+    <p class=title1><span class="bold">Week 3 - Editing data and writing JSON by hand</span></p>
+    
+    <div class="container">
+  
+      <!--Chart 6-->
+      <div class="chart" id="chart6">
+        <script>
+          var myChart6 = "RonaldoGoals.json";
+          vegaEmbed('#chart6', myChart6);
+        </script>
+      </div>
+  
+      <!--Chart 7-->
+      <div class="chart" id="chart7">
+        <script>
+          var myChart7 = "ScotlandPopulation.json";
+          vegaEmbed('#chart7', myChart7);
+        </script>
+      </div>
+  
+    </div>
+    
+    <p class=title1><span class="bold">Week 4 - API driven charts</span></p>
+    
+    <div class="container">
+  
+      <!-- Chart 8-->
+      <div class="chart" id="chart8">
+        <script>
+          var myChart8 = "TSLAPrice.json";
+          vegaEmbed('#chart8', myChart8);
+        </script>
+      </div>
+      
+      <!--Chart 9-->
+      <div class="chart" id="chart9">
+        <script>
+          var myChart9 = "NO2Emissions.json";
+          vegaEmbed('#chart9', myChart9);
+        </script>
+      </div>
+  
+    </div>
+    
+    <p class=title1><span class="bold">Week 5 - Using loops to make mutiple API downloads</span></p>
+    
+    <div class="container">
+  
+      <!--Chart 10-->
+      <div class="chart" id="chart10">
+        <script>
+          var myChart10 = "DOTChart.json";
+          vegaEmbed('#chart10', myChart10);
+        </script>
+      </div>
+      
+      <!--Chart 11-->
+      <div class="chart" id="chart11">
+        <script>
+            var myChart11 = "UNIChart.json";
+          vegaEmbed('#chart11', myChart11);
+        </script>
+      </div>
+  
+    </div>
+    
+    <div class="container">
+      
+      <!--Chart 12-->
+      <div class="chart" id="chart12">
+        <script>
+          var myChart12 = "SOLChart.json";
+          vegaEmbed('#chart12', myChart12);
+        </script>
+      </div>
+      
+      <!--Chart 13-->
+      <div class="chart" id="chart13">
+        <script>
+          var myChart13 = "LINKChart.json";
+          vegaEmbed('#chart13', myChart13);
+        </script>
+      </div>
+      
+    </div>
+    
+  </body>
+  
+  <!-- ///////////////////  END BODY //////////////////////////////////// -->
+  
+  </html>
