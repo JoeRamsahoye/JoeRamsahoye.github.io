@@ -1,120 +1,129 @@
 body {
-    background-color: #0d84b3;
-    max-width: auto;
-    margin: auto;
+  background-color: #0d84b3;
+  max-width: auto;
+  margin: auto;
 }
-  
+
 footer {
-    height: 100px
+  height: 100px
 }
 
 header {
-    font-family: "Comic Sans MS", "Comic Sans";
-    font-size: 80px; 
-    font-weight: bold;
-    letter-spacing: 1px; 
-    line-height: 1; 
-    text-align: center;  
+  font-family: "Comic Sans MS", "Comic Sans";
+  font-size: 80px; 
+  font-weight: bold;
+  letter-spacing: 1px; 
+  line-height: 1; 
+  text-align: center;  
 }
 
 .title1 {
-    /*font-family: 'Helvetica Neue', sans-serif;*/
-    font-family: "Comic Sans MS", "Comic Sans";
-    color: #ffffff;
-    font-size: 20px; 
-    letter-spacing: 1px; 
-    line-height: 1; 
-    text-align: center;
+  /*font-family: 'Helvetica Neue', sans-serif;*/
+  font-family: "Comic Sans MS", "Comic Sans";
+  color: #ffffff;
+  font-size: 20px; 
+  letter-spacing: 1px; 
+  line-height: 1; 
+  text-align: center;
+}
+
+.title2 {
+  /*font-family: 'Helvetica Neue', sans-serif;*/
+  font-family: "Comic Sans MS", "Comic Sans";
+  color: #ffffff;
+  font-size: 20px; 
+  letter-spacing: 1px; 
+  line-height: 1; 
+  text-align: center;
 }
 
 .bold {
-    font-weight:bold
+  font-weight:bold
 }
 
 .white {
-    color: #ffff;
+  color: #ffff;
 }
 
 .red {
-    color: #051077;
+  color: #051077;
 }
 
 .chart {
-    font-family: Arial, Helvetica, sans-serif;
-    vertical-align: center;
-    width: 400px;
-    height: 400px;
-    border: #051077 solid 4px;
-    border-radius: 10px;
-    margin: 10px;
-    padding: 8px;
-    background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  vertical-align: center;
+  width: 400px;
+  height: 400px;
+  border: #051077 solid 4px;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 8px;
+  background-color: white;
 }
 
 
 .container {
-    background-colour: #264653;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Button code */
 .button-74 {
-  background-color: #dfd0d0;
-  border: 2px solid #051077;
-  border-radius: 30px;
-  box-shadow: #051077 4px 4px 0 0;
-  color: #000000;
-  cursor: url(https://cur.cursors-4u.net/symbols/sym-1/sym46.cur), auto !important;
-  margin: 3px;
-  display: inline-block;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 0 18px;
-  line-height: 50px;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+background-color: #dfd0d0;
+border: 2px solid #051077;
+border-radius: 30px;
+box-shadow: #051077 4px 4px 0 0;
+color: #000000;
+cursor: url(https://cur.cursors-4u.net/symbols/sym-1/sym46.cur), auto !important;
+margin: 3px;
+display: inline-block;
+font-weight: 600;
+font-size: 18px;
+padding: 0 18px;
+line-height: 50px;
+text-align: center;
+text-decoration: none;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
 }
 
 .button-74:hover {
-  background-color: #ffff;
+background-color: #ffff;
 }
 
 .button-74:active {
-  background-color: #ffffff;
-  box-shadow: #422800 2px 2px 0 0;
-  transform: translate(2px, 2px);
+background-color: #ffffff;
+box-shadow: #422800 2px 2px 0 0;
+transform: translate(2px, 2px);
 }
 
 .button-74-clicked {
-  background-color: #ffffff;
-  border: 2px solid #051077;
-  border-radius: 30px;
-  box-shadow: #422800 2px 2px 0 0;
-  color: #000000;
-  cursor: url(https://cur.cursors-4u.net/symbols/sym-1/sym46.cur), auto !important;
-  margin: 3px;
-  display: inline-block;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 0 18px;
-  line-height: 50px;
-  text-align: center;
-  transform: translate(2px, 2px);
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+background-color: #ffffff;
+border: 2px solid #051077;
+border-radius: 30px;
+box-shadow: #422800 2px 2px 0 0;
+color: #000000;
+cursor: url(https://cur.cursors-4u.net/symbols/sym-1/sym46.cur), auto !important;
+margin: 3px;
+display: inline-block;
+font-weight: 600;
+font-size: 18px;
+padding: 0 18px;
+line-height: 50px;
+text-align: center;
+transform: translate(2px, 2px);
+text-decoration: none;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
 }
 
 
 @media (min-width: 768px) {
-  .button-74 {
-    min-width: 120px;
-    padding: 0 25px;
-  }
+.button-74 {
+  min-width: 120px;
+  padding: 0 25px;
+}
 }
