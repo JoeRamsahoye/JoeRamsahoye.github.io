@@ -20,8 +20,8 @@
       {"Age":"75+", "Range of Weeks*": "15-20 Weeks", "Number of Days":5.5}
     ]
   },
-  "height": 250,
-  "width": 250,
+  "height": 280,
+  "width": 220,
   "mark": "bar",
   "encoding": {
     "x": {
