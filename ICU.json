@@ -20,8 +20,8 @@
       {"Age":"75+", "Range of Weeks*": "15-20 Weeks", "Number of Days":5.5}
     ]
   },
-  "height": 300,
-  "width": 300,
+  "height": 250,
+  "width": 250,
   "mark": "bar",
   "encoding": {
     "x": {
@@ -33,7 +33,7 @@
     "type": "nominal",
     "scale": {
       "domain": ["12-14 Weeks", "15-20 Weeks"],
-      "range": ["#051077", "#70af53"]
+      "range": ["#051077", "#0d84b3"]
     }}
   }
 }
