@@ -1,0 +1,62 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Verbier, Switerzland🇨🇭 Temperature",
+        "subtitle":"Average monthly temperatures scraped from weathersparks.com",
+        "subtitleFontStyle":"italic",
+        "subtitleFontSize":10,
+        "anchor": "start",
+        "color": "black"
+      },
+    "description": "Stock prices of 5 Tech Companies over Time.",
+    "data": {"url": "https://raw.githubusercontent.com/JoeRamsahoye/JoeRamsahoye.github.io/main/VerbierTemp.csv"},
+  
+    "height": 300,
+    "width": 300,
+  
+    "layer": [
+      {
+        "mark": "line",
+        "encoding": {
+          "x": {
+            "field": "Month",
+            "type": "nominal"
+          },
+          "y": {
+            "field": "High",
+            "type": "quantitative",
+            "title": "Temperature",
+            "axis": {"grid": false}
+          }
+        }
+      },
+      {
+        "mark": "line",
+        "encoding": {
+          "x": {
+            "field": "Month",
+            "type": "nominal" 
+          },
+          "y": {
+            "field": "Low",
+            "type": "quantitative"
+          }
+        }
+      },
+      {
+        "mark": "line",
+        "encoding": {
+          "x": {
+            "field": "Month",
+            "type": "nominal"
+          },
+          "y": {
+            "field": "Average",
+            "type": "quantitative"
+          }
+        }
+      }
+  
+    ]
+  }
+    
