@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
         "text": "Verbier, Switerzland🇨🇭 Temperature",
-        "subtitle":"Average monthly temperatures scraped from weathersparks.com",
+        "subtitle":"Average monthly temperature highs, lows and means scraped from weathersparks.com ",
         "subtitleFontStyle":"italic",
         "subtitleFontSize":10,
         "anchor": "start",
@@ -13,11 +13,16 @@
   
     "height": 300,
     "width": 300,
-  
+    
     "layer": [
       {
-        "mark": "line",
-        "encoding": {
+        "mark": {"type": "line", 
+        "point": false,
+        "clip": true,
+        "color": "#051077"
+        
+    },
+        "encoding": { 
           "x": {
             "field": "Month",
             "type": "nominal"
@@ -25,13 +30,17 @@
           "y": {
             "field": "High",
             "type": "quantitative",
-            "title": "Temperature",
+            "title": "Temperature (°F)",
             "axis": {"grid": false}
           }
         }
       },
       {
-        "mark": "line",
+        "mark": {"type": "line", 
+        "point": false,
+        "clip": true,
+        "color": "lightskyblue"
+    },
         "encoding": {
           "x": {
             "field": "Month",
@@ -44,7 +53,11 @@
         }
       },
       {
-        "mark": "line",
+        "mark": {"type": "line", 
+        "point": false,
+        "clip": true,
+        "color": "#0d84b3"
+    },
         "encoding": {
           "x": {
             "field": "Month",
@@ -56,7 +69,11 @@
           }
         }
       }
-  
     ]
+    
+  
+    
+  
+  
   }
     
