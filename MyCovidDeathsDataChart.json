@@ -19,7 +19,7 @@
         
         {"filter": {
           "field": "areaName", 
-          "oneOf": ["Bristol, City of", "Portsmouth", "Manchester"]}
+          "oneOf": ["City of Edinburgh", "Bristol", "Surrey"]}
           }
   
   
@@ -50,7 +50,7 @@
       "color": {
         "field": "areaName",
         "type": "nominal",
-        "scale": {"scheme": "yellowgreenblue"},
+        "scale": {"scheme": "darkblue"},
         "title": null,
         "legend": {
           "orient": "top-left", 
@@ -58,4 +58,3 @@
       }
   }
   }
-
