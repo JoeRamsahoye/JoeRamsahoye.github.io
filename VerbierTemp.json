@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
         "text": "Verbier, Switerzland🇨🇭 Temperature",
-        "subtitle":"Average monthly temperature highs, lows and means scraped from weathersparks.com ",
+        "subtitle":"Average monthly temperatures scraped from weathersparks.com ",
         "subtitleFontStyle":"italic",
         "subtitleFontSize":10,
         "anchor": "start",
