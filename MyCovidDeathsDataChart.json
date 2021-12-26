@@ -19,7 +19,7 @@
         
         {"filter": {
           "field": "areaName", 
-          "oneOf": ["City of Edinburgh", "Bristol", "Surrey"]}
+          "oneOf": ["City of Edinburgh", "Bristol, City of", "Surrey Heath"]}
           }
   
   
