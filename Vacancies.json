@@ -26,7 +26,7 @@
 
     "mark":{
       "type": "line",
-      "color":"#051077",
+      "color":"#0d84b3",
       "strokeWidth":2,
       "opacity":1
     },

@@ -20,7 +20,7 @@
     "type": "line",
     "point": false,
     "interpolate": "monotone",
-    "color": "#051077"
+    "color": "#0d84b3"
   },
   "encoding": {
     "x": {
