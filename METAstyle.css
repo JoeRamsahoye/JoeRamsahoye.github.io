@@ -36,6 +36,9 @@ header {
   line-height: 1; 
   text-align: center;
 }
+.textLink{
+  color: #051077;
+}
 
 .bold {
   font-weight:bold
@@ -52,8 +55,8 @@ header {
 .chart {
   font-family: Arial, Helvetica, sans-serif;
   vertical-align: center;
-  width: 400px;
-  height: 400px;
+  width: flex;
+  height: flex;
   border: #051077 solid 4px;
   border-radius: 10px;
   margin: 10px;
