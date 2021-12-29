@@ -5,60 +5,85 @@
 
 <head>
 
-    <!--The next three lines allow the Vega embed-->
-    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
-  
-    <!-- CSS -->
-    <link rel="stylesheet" href="METAstyle.css">
-  
-    <!-- Tab name -->
-    <title>Joe Ramsahoye</title>
-    
-  </head>
-  
-  <!-- ///////////////////  HEAD //////////////////////////////////// -->
-  
-  
-  
-  <!-- ///////////////////  START BODY //////////////////////////////////// -->
-  <body onload="myFunction()"> 
-  
-    <header><span class="White">Data</span><span class="Red">Science</span></header>
+  <!--The next three lines allow the Vega embed-->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
 
-    <p class=title1><span class="bold">By Joe Ramsahoye</span></p>
-    
-    <div class="container">
-      <button class="button-74" onclick="location.href='https://joeramsahoye.github.io'">Home</button>
-      <button class="button-74" onclick="location.href='https://joeramsahoye.github.io/portfolio.html'">Portfolio</button>
-      <button class="button-74-clicked" onclick="location.href='https://joeramsahoye.github.io/project.html'">Project</button>
-      <button class="button-74" onclick="location.href='https://github.com/joeramsahoye/joeramsahoye.github.io'">Github</button>
-      <button class="button-74" onclick="location.href='https://rapidcharts.io/datascience'">RapidCharts</button>
-    </div>
-    
-    <p class=title1><span class="bold">Section 1</span></p>
+  <!-- CSS -->
+  <link rel="stylesheet" href="METAstyle.css">
 
-    <div class="container">
+  <!-- Tab name -->
+  <title>Joe Ramsahoye</title>
   
-      <!--Chart 1 -->
-      <div class="chart" id="chart1">
-        <script>
-          var myChart1 = "MetaCrypto.json";
-          vegaEmbed('#chart1', myChart1);
-        </script>
-      </div>
+</head>
 
+<!-- ///////////////////  HEAD //////////////////////////////////// -->
+
+
+
+<!-- ///////////////////  START BODY //////////////////////////////////// -->
+<body onload="myFunction()"> 
+
+  <header><span class="White">Data</span><span class="Red">Science</span></header>
+
+  <p class=title1><span class="bold">By Joe Ramsahoye</span></p>
+  
+  <div class="container">
+    <button class="button-74" onclick="location.href='https://joeramsahoye.github.io'">Home</button>
+    <button class="button-74" onclick="location.href='https://joeramsahoye.github.io/portfolio.html'">Portfolio</button>
+    <button class="button-74-clicked" onclick="location.href='https://joeramsahoye.github.io/project.html'">Project</button>
+    <button class="button-74" onclick="location.href='https://github.com/joeramsahoye/joeramsahoye.github.io'">Github</button>
+    <button class="button-74" onclick="location.href='https://rapidcharts.io/datascience'">RapidCharts</button>
+  </div>
+  
+  <p class=title1><span class="bold">Section 1</span></p>
+
+  <div class="container">
+
+    <!--Chart 1 -->
+    <div class="chart" id="chart1">
+      <script>
+        var myChart1 = "MetaCrypto.json";
+        vegaEmbed('#chart1', myChart1);
+      </script>
     </div>
 
-    <p class=title1><span class="bold">Section 2</span></p>
+  </div>
 
-    <div class="container">
-      
-      <!--Chart 2-->
-      <div class="chart" id="chart2">
-        <img src = "BTCETH.png" />
-      </div>
+  <p class=title1><span class="bold">Section 2</span></p>
 
+  <div class="container">
+    
+    <!--Chart 2-->
+    <div class="chart" id="chart2">
+      <img src = "BTCETH.png" />
     </div>
 
+  </div>
+
+  <p class=title1><span class="bold">Effect of Tesla buying $1.5bn of Bitcoin on the price of Bitcoin and Tesla</span></p>
+
+  <div class="container">
+
+    <!--Chart 3-->
+    <div class="chart" id="chart3">
+      <script>
+        var myChart3 = "TSLABTCbuy.json";
+        vegaEmbed('#chart3', myChart3);
+      </script>
+    </div>
+
+    <!--Chart 4-->
+    <div class="chart" id="chart4">
+      <img src = "BTCTSLA.png" />
+    </div>
+
+     <!--Chart 5-->
+     <div class="chart" id="chart5">
+      <script>
+        var myChart5 = "BTCbuy.json";
+        vegaEmbed('#chart5', myChart5);
+      </script>
+    </div>
+  </div>
