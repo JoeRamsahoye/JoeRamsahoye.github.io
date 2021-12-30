@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     
     "title": {
-      "text": "Tesla Share Price Immediatetly After Bitcoin buy",
+      "text": "Tesla Share Price 3 Months After Bitcoin buy",
       "subtitle":"Price at close from 06/02/2021 to 06/08/2021 ($), Ticker: TSLA",
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
@@ -31,7 +31,7 @@
         "type": "temporal",
         "title": "Month",
         "axis": {"grid": false},
-        "scale": {"domainMin": {"year": 2021, "month": "feb", "date": 6}, "domainMax":{"year": 2021, "month": "jul", "date": 6}}
+        "scale": {"domainMin": {"year": 2021, "month": "feb", "date": 6}, "domainMax":{"year": 2021, "month": "may", "date": 6}}
       },
   
       "y": {
@@ -39,8 +39,7 @@
         "type": "quantitative",
         "title": "Price at close ($)",
         "axis": {"grid": false},
-        "scale": {"domain": [0,1000]}
+        "scale": {"domain": [0,900]}
       }
   }
   }
-  
