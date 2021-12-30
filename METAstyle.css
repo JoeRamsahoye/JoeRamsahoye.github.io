@@ -64,6 +64,19 @@ header {
   background-color: white;
 }
 
+.tweet {
+  font-family: Arial, Helvetica, sans-serif;
+  vertical-align: center;
+  width: flex;
+  height: flex;
+  border: #051077 solid 4px;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  padding-top: 0px;
+  background-color: white;
+}
+
 
 .container {
   display: flex;
