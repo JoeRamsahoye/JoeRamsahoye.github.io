@@ -31,7 +31,7 @@
         "type": "quantitative",
         "title": "Price at close ($)",
         "axis": {"grid": false},
-        "scale": {"domain": [0, 900]}
+        "scale": {"domain": [500, 900]}
       },
       "tooltip": [
         {"field": "timestamp", "title": "Date", "type": "temporal"},
