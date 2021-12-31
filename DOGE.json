@@ -14,8 +14,8 @@
     "data": {
       "url": "https://rest.coinapi.io/v1/ohlcv/DOGE/USD/history?period_id=8HRS&time_start=2021-01-10T00:00:00&limit=100000&include_empty_items=false&apikey=B2786AE4-BD19-492A-A894-375F92F0F89A"
     },
-    "height": 500,
-    "width": 500,
+    "height": 1300,
+    "width": 900,
     "transform": [
       {"calculate": "'$'+datum.price_close", "as": "price_close_dollars"},
       {"calculate": "'$'+datum.price_high", "as": "price_high_dollars"},
