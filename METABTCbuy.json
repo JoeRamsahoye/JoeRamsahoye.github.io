@@ -1,10 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
     "config": {"background": "#e6edf0"},
-    "description": "Bitcoin close",
+    "description": "Bitcoin opening price",
     "title": {
-      "text": "Bitcoin price after Tesla Buy",
-      "subtitle": "8 Hour interval closing price Source: CoinAPI",
+      "text": "Bitcoin Price 11 months After Bitcoin Buy",
+      "subtitle": "Price at close from 06/02/2021 to present",
       "subtitleFontStyle": "italic",
       "subtitleFontSize": 10,
       "anchor": "start",
@@ -12,10 +12,10 @@
       "subtitleColor": "black"
     },
     "data": {
-      "url": "https://rest.coinapi.io/v1/ohlcv/BTC/USD/history?period_id=8HRS&time_start=2021-02-06T00:00:00&limit=100000&include_empty_items=false&apikey=B2786AE4-BD19-492A-A894-375F92F0F89A"
+      "url": "https://rest.coinapi.io/v1/ohlcv/BTC/USD/history?period_id=8HRS&time_start=2021-01-20T00:00:00&limit=100000&include_empty_items=false&apikey=60BD0DF8-F250-4CF3-B8D7-B023248A51A8"
     },
-    "height": 330,
-    "width": 300,
+    "height": 300,
+    "width": 400,
     "transform": [
       {"calculate": "'$'+datum.price_close", "as": "price_close_dollars"},
       {"calculate": "'$'+datum.price_high", "as": "price_high_dollars"},
@@ -39,18 +39,18 @@
         "bind": {
           "input": "range",
           "min": 0,
-          "max": 12,
+          "max": 10,
           "step": 1,
           "name": "Start month:"
         }
       },
       {
         "name": "maxMonth",
-        "value": 12,
+        "value": 10,
         "bind": {
           "input": "range",
           "min": 0,
-          "max": 12,
+          "max": 10,
           "step": 1,
           "name": "End month:"
         }
@@ -61,9 +61,9 @@
         "field": "time_period_start",
         "type": "temporal",
         "axis": {
-          "title": "Date",
+          "title": "date",
           "grid": false,
-          "labelSeparation": 20,
+          "labelSeparation": 10,
           "ticks": false
         }
       },
@@ -78,7 +78,7 @@
         {"field": "price_close_dollars", "title": "Closing Price"},
         {
           "field": "volume_traded",
-          "title": "Volume",
+          "title": "Trade volume",
           "type": "quantitative"
         },
         {"field": "price_high_dollars", "title": "High"}

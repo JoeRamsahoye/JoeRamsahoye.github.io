@@ -1,5 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    
   
   
    "title": {
@@ -11,8 +12,7 @@
     "color": "black",
     "subtitleColor":"black"},
   
-  "config": {
-    "background":"#ffffff",
+    "config": {"background": "#e6edf0",
     "view": {
       "stroke": "transparent"}},
   
