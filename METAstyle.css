@@ -37,6 +37,16 @@ header {
   text-align: center;
 }
 
+.title3 {
+  /*font-family: 'Helvetica Neue', sans-serif;*/
+  font-family: "Calibri";
+  color: black;
+  font-size: 15px; 
+  letter-spacing: 1px; 
+  line-height: 1; 
+  text-align: center;
+}
+
 .para {
   /*font-family: 'Helvetica Neue', sans-serif;*/
   font-family: "Calibri";
@@ -77,12 +87,12 @@ header {
 
 .tweet {
   font-family: Arial, Helvetica, sans-serif;
-  vertical-align: left;
-  width: flex;
+  vertical-align: center;
+  width: 290;
   height: flex;
-  border: #e6edf0 solid 4px;
-  border-radius: 10px;
-  margin: 10px;
+  border: #e6edf0 solid 0px;
+  border-radius: 0px;
+  margin: 0px;
   padding: 0px;
   padding-top: 0px;
   background-color: #e6edf0
