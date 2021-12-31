@@ -44,7 +44,7 @@ header {
   font-size: 15px; 
   letter-spacing: 1px; 
   line-height: 1; 
-  text-align: center;
+  text-align: center, auto !important;
 }
 
 .textLink{
