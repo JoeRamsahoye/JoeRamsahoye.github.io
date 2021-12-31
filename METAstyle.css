@@ -36,6 +36,17 @@ header {
   line-height: 1; 
   text-align: center;
 }
+
+.para {
+  /*font-family: 'Helvetica Neue', sans-serif;*/
+  font-family: "Calibri";
+  color: black;
+  font-size: 15px; 
+  letter-spacing: 1px; 
+  line-height: 1; 
+  text-align: center;
+}
+
 .textLink{
   color: #051077;
 }

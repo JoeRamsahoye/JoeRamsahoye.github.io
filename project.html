@@ -37,7 +37,11 @@
     <button class="button-74" onclick="location.href='https://rapidcharts.io/datascience'">RapidCharts</button>
   </div>
   
-  <p class=title1><span class="bold">Section 1 - Looking at the crpytocurrency market as a whole to identify extreme market periods</span></p>
+  <p class=title1><span class="bold">Section 1 - Looking at the cryptocurrency market as a whole to identify extreme market periods</span></p>
+  <p class=para><span>Chart 1 shows daily market returns at close for six large marketcap cryptocurrencies. <br> This circle plot lets us identify periods of high volatility in the market 
+    and also lets us see more specifically what coins are <br> 1) most volatile and 2) tend to diverge from the returns of the rest of market. 
+    <br> This will help form areas of interest for analysis later on.
+   </span></p>
 
   <div class="container">
 
@@ -48,11 +52,18 @@
         vegaEmbed('#chart1', myChart1);
       </script>
     </div>
-
+    
   </div>
+
+  <p class=para><span> From Chart 1, we can see there are peiods of high volatility in 2018 Q1 and then even more so in 2020 Q4 and and 2021 Q1.
+  <br> But most noticably of all, when selecting coins to isolate from the drop down box, it is obvious that Dogecoin is by 
+  <br>far the most volatile and also seems to diverge the most from the rest of the market. Reasons for this will be investigated later on.</span></p>
 
   <p class=title1><span class="bold">Section 2 - Looking at the correlation between the two most dominant cryptocurrencys to investigate how the market moves together </span></p>
 
+  <p class=para><span> Charts 2 visualises the proportional market dominance of the 8 largest cryptocurrencies. 
+    This will aid in better understanding why some coins may diverge away from the returns of the rest of the market.
+    <br> Chart 3 then regresses Bitcoin on Ethereum to investigate how correlated the two larget cryptocurrencies are. </span></p>
   <div class="container">
 
      <!--Chart 1 -->
@@ -70,7 +81,16 @@
 
   </div>
 
+  <p class=para><span> From Chart 2, we can see clearly that Bitcoin and Ethereum hold majority dominance over the rest of the market and combined are 30 times more dominant than Tether (the third most dominant coin).
+  <br>From Chart 3, we can see that Bitcoin and Ethereum are strongly correlated which is unsurpsing given their relative dominance
+  <br>However from Chart x, we can see that Bitcoin are Dogecoin are much less correlated showing how smaller marketcap coins tend to move more independent of the market perhaps making them more susceptible to external factors/influences </span></p>
+
   <p class=title1><span class="bold">Section 3 - Effect of Tesla buying $1.5bn of Bitcoin on the price of Bitcoin and Tesla</span></p>
+
+  <p class=para><span>Given Tesla's recent announcement of the purchase of $1.5bn worth of Bitcoin on 8th February 2021. 
+    It would be intersting to see how the market reacted to the news albeit postive or negative given the controversial 
+    nature of Bitcoin and Tesla both for different reasons.
+  </span></p>
 
   <div class="container">
 
@@ -96,7 +116,27 @@
     </div>
   </div>
 
+  <p class=para><span> From Chart 5, we can see a clear decrease in price of Tesla stock 3 months after the annoucement.
+    From Chart 6, we can see a rapid increase in the price of Bitcoin after the announcement.
+    Combing the trends from Charts 5 and 6, a regression of Bitcoin on Tesla yields a negative correlation perhaps suggesting conflicting views/opnions between Bitcoin and Tesla investors about both stocks.
+  </span></p>
   <p class=title1><span class="bold">Section 4 - Effect of Elon Musks Tweets on the price of Dogecoin</span></p>
+
+  <p class=para><span> From our previous analysis, we have seen a brief insight into how the markets behave. 
+    In section 3, we saw the power and influence that Elon Musk actions have on the the most dominant cryptocurrency through his company Tesla.
+    We now turn back to section 1 and 2, where we saw that Dogecoin's returns tend to deviate away from the rest of the market. 
+    But why is this? To understand why, we need to know what Dogecoin's fundamental principles are and its usecase.
+    The problem with this is that Dogecoin does not have any fundamentals or a usecase. In fact, it was set up purely as a joke or "memecoin"
+    as are more commonly known nowadays so its intrinsic value is zero. The coin was released in 2013 to make fun at the wild speculation around
+    cryptocurrencies at the time. However, in recent years the coin has gathered serious media attention largely due to Elon Musk poking fun
+    at it on his twitter feed.
+  </span></p>
+  <p class=para><span> The final chart shows Dogecoins price in 2021 with 8 hour intervals to ensure raid price movements are picked up.
+    Dogecoin related tweets from @elonmusk are also embedded displaying the date and time of each tweet so analysis can be carried out on
+    the chart to determine if these tweets result in significant price movements.
+
+  </span></p>
+
 
   <div class="container2">
 
@@ -122,3 +162,9 @@
   </div>
 
 </div>
+
+<p class=para><span> After adjusting the interactive slider and using the charts tooltip. I WOULD BE ABLE TO SEE IF COINAPI WOULD ACTUALLY
+  BE SOUND AND GIVE ME MORE THAN 100 REQUESTS PER DAY FOR FUCK SAKE. We can see that each one of the tweets 
+  presents indcues a movement in price be it positive or negative depending on the nature of the tweet. This further emphasizes Elon Musk's 
+  power over the cryptocurrency market as investors are willing to make financial decisions on an asset with no real value based of jokes
+  from a twitter account.
