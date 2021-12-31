@@ -11,7 +11,7 @@
       "subtitleColor": "black"
     },
     "data": {
-      "url": "https://rest.coinapi.io/v1/ohlcv/DOGE/USD/history?period_id=8HRS&time_start=2021-00-10T00:00:00&limit=100000&include_empty_items=false&apikey=57B9B077-2893-44AC-8926-C5DF44F3A488"
+      "url": "https://rest.coinapi.io/v1/ohlcv/DOGE/USD/history?period_id=8HRS&time_start=2021-01-10T00:00:00&limit=100000&include_empty_items=false&apikey=026BA7A8-C31D-48C3-B4A8-169C6FD15BF4"
     },
     "height": 500,
     "width": 500,
@@ -25,6 +25,7 @@
       {"filter": "datum.month_time_period_start>minMonth"},
       {"filter": "datum.month_time_period_start<maxMonth"}
     ],
+    
     "mark": {
       "type": "line",
       "point": false,
