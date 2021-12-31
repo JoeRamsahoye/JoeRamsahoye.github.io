@@ -1,5 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "config": {"background": "#e6edf0"},
     
     "title": {
       "text": "Covid data",
@@ -54,7 +55,7 @@
         "title": null,
         "legend": {
           "orient": "top-left", 
-          "fillColor": "#FcFdFd"}
+          "fillColor": "#e6edf0"}
       }
   }
   }

@@ -3,7 +3,7 @@
 
 
    "title": {
-    "text": "Ether: long run",
+    "text": "Ethereum: long run",
     "subtitle":"Daily ETH price in USD. Source: Investing.com",
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
@@ -12,7 +12,7 @@
     "subtitleColor":"black"},
 
   "config": {
-    "background":"#ffffff",
+    "background":"#e6edf0",
     "view": {
       "stroke": "transparent"}},
  
