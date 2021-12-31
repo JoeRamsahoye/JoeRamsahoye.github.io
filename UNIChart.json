@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    
+    "config": {"background": "#e6edf0"},
     "title": {
       "text": "UNISWAP Price",
       "subtitle":"Price at close (USD), Source: CoinAPI.io",

@@ -1,5 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "config": {"background": "#e6edf0"},
     "title": {
           "text": "Verbier, Switerzland🇨🇭 Temperature",
           "subtitle":"Average monthly temperatures scraped from weathersparks.com ",
@@ -29,7 +30,7 @@
         }
       },
       {
-        "mark": {"type": "point",  "color": "#0d84b3", "opacity": 1},
+        "mark": {"type": "point",  "color": "#051077", "opacity": 1},
         "encoding": {
           "y": {"field": "Low", "title": "Min Temperature"}
         }
