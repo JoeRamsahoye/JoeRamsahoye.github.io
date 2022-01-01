@@ -1,10 +1,10 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "config": {"background": "#e6edf0"},
     "description": "Dogecoin close",
     "title": {
       "text": "Dogecoin price in 2021",
-      "subtitle": "8 Hour interval closing price Source: CoinAPI",
+      "subtitle": "1 Hour interval closing price Source: CoinAPI",
       "subtitleFontStyle": "italic",
       "subtitleFontSize": 10,
       "anchor": "start",
@@ -12,7 +12,7 @@
       "subtitleColor": "black"
     },
     "data": {
-      "url": "https://rest.coinapi.io/v1/ohlcv/DOGE/USD/history?period_id=8HRS&time_start=2021-01-10T00:00:00&limit=100000&include_empty_items=false&apikey=57B9B077-2893-44AC-8926-C5DF44F3A488"
+      "url": "https://rest.coinapi.io/v1/ohlcv/DOGE/USD/history?period_id=1HRS&time_start=2021-01-10T00:00:00&limit=100000&include_empty_items=false&apikey=BBC5F5B6-2859-47C8-93ED-EA70E879C5C4"
     },
     "height": 1300,
     "width": 900,
@@ -26,7 +26,6 @@
       {"filter": "datum.month_time_period_start>minMonth"},
       {"filter": "datum.month_time_period_start<maxMonth"}
     ],
-    
     "mark": {
       "type": "line",
       "point": false,
@@ -77,11 +76,7 @@
       "tooltip": [
         {"field": "time_period_start", "title": "Date", "type": "temporal"},
         {"field": "price_close_dollars", "title": "Closing Price"},
-        {
-          "field": "volume_traded",
-          "title": "Volume",
-          "type": "quantitative"
-        },
+        {"field": "volume_traded", "title": "Volume", "type": "quantitative"},
         {"field": "price_high_dollars", "title": "High"}
       ]
     }
