@@ -12,7 +12,7 @@
       "subtitleColor": "black"
     },
     "data": {
-      "url": "https://rest.coinapi.io/v1/ohlcv/DOGE/USD/history?period_id=8HRS&time_start=2021-01-10T00:00:00&limit=100000&include_empty_items=false&apikey=92B6B077-C0EF-434B-B876-82F597B782DF"
+      "url": "https://rest.coinapi.io/v1/ohlcv/DOGE/USD/history?period_id=8HRS&time_start=2021-01-10T00:00:00&limit=100000&include_empty_items=false&apikey=57B9B077-2893-44AC-8926-C5DF44F3A488"
     },
     "height": 1300,
     "width": 900,
