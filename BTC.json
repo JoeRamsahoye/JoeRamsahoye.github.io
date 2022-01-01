@@ -14,8 +14,8 @@
     "data": {
       "url": "https://rest.coinapi.io/v1/ohlcv/BTC/USD/history?period_id=8HRS&time_start=2021-02-06T00:00:00&limit=100000&include_empty_items=false&apikey=57B9B077-2893-44AC-8926-C5DF44F3A488"
     },
-    "height": 330,
-    "width": 300,
+    "height": 350,
+    "width": 350,
     "transform": [
       {"calculate": "'$'+datum.price_close", "as": "price_close_dollars"},
       {"calculate": "'$'+datum.price_high", "as": "price_high_dollars"},
