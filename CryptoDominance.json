@@ -21,8 +21,8 @@
           "color": "black"
         },
     "config": {"background": "#e6edf0"},
-    "height": 370,
-    "width": 370,
+    "height":380,
+    "width": 300,
     "mark": {
       "type": "arc",
       "innerRadius": 80,
