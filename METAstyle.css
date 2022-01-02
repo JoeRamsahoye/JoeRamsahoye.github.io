@@ -249,3 +249,18 @@ touch-action: manipulation;
     padding: 10px;
   }
 }
+
+@media (max-width: 480px) {
+  body {
+      overflow-x: hidden;
+  }
+  .heading {
+      font-size: 32px;
+  }
+  .chart {
+      width: 380px;
+  }
+  .title1 {
+      font-size: 15px;
+  }
+}
