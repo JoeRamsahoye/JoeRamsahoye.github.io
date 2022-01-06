@@ -3,7 +3,7 @@
   "config": {"background": "#e6edf0"},
   "description": "Chart 8: Dogecoin Price",
   "title": {
-    "text": "Dogecoin price in 2021",
+    "text": "Chart 8: Dogecoin Price",
     "subtitle": "1 Hour interval price at close in $ using CoinApi's API source: CoinAPI.com",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
@@ -15,7 +15,7 @@
     "url": "https://rest.coinapi.io/v1/ohlcv/DOGE/USD/history?period_id=1HRS&time_start=2021-01-10T00:00:00&limit=100000&include_empty_items=false&apikey="
   },
   "height": 700,
-  "width": 500,
+  "width": 600,
   "transform": [
     {"calculate": "'$'+datum.price_close", "as": "price_close_dollars"},
     {"calculate": "'$'+datum.price_high", "as": "price_high_dollars"},
