@@ -12,10 +12,10 @@
     "subtitleColor": "black"
   },
   "data": {
-    "url": "https://rest.coinapi.io/v1/ohlcv/DOGE/USD/history?period_id=1HRS&time_start=2021-01-10T00:00:00&limit=100000&include_empty_items=false&apikey=CFEBCB2E-2363-4B96-860C-EF9C8BA93EE5"
+    "url": "https://rest.coinapi.io/v1/ohlcv/DOGE/USD/history?period_id=1HRS&time_start=2021-01-10T00:00:00&limit=100000&include_empty_items=false&apikey="
   },
   "height": 700,
-  "width": 900,
+  "width": 500,
   "transform": [
     {"calculate": "'$'+datum.price_close", "as": "price_close_dollars"},
     {"calculate": "'$'+datum.price_high", "as": "price_high_dollars"},
