@@ -2,8 +2,8 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "config": {"background": "#e6edf0"},
     "title": {
-      "text": "Cryptocurrency Daily Returns",
-      "subtitle": "Daily returns for 6 large market cap cryptocurrencies source: Binance.com ",
+      "text": "Chart 1: Daily Cryptocurrency Returns",
+      "subtitle": "Daily returns for six high marketcap cryptocurrencies source: Binance.com ",
       "subtitleFontStyle": "italic",
       "subtitleFontSize": 10,
       "anchor": "start",
@@ -70,7 +70,7 @@
         "type": "nominal",
         "scale": {"scheme": "darkblue"},
         "title": "Cryptocurrency",
-        "legend": {"orient": "top-left", "fillColor": "#e6edf0"}
+        "legend": {"orient": "top-left", "fillColor": "#0f6d96"}
       },
       "tooltip": [
         {"field": "Cryptocurrency", "title": "Coin", "type": "ordinal"},

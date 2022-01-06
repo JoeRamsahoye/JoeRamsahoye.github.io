@@ -1,42 +1,42 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "data": {
-      "values": [
-        {"Cryptocurrency": "Bitcoin", "Percentage Dominance": 40.3455},
-        {"Cryptocurrency": "Ethereum", "Percentage Dominance": 20.0027},
-        {"Cryptocurrency": "Binance Coin", "Percentage Dominance": 3.8904},
-        {"Cryptocurrency": "Tether", "Percentage Dominance": 3.5148},
-        {"Cryptocurrency": "Solana", "Percentage Dominance": 2.4174},
-        {"Cryptocurrency": "Cardano", "Percentage Dominance": 2.0392},
-        {"Cryptocurrency": "USD Coin", "Percentage Dominance": 1.8967},
-        {"Cryptocurrency": "XRP", "Percentage Dominance": 1.7952}
-      ]
-    },
-    "title": {
-          "text": "Market Dominance of the Top Cryptocurrencies",
-          "subtitle":" Percentage (%) market dominance source: coinmarketcap.com",
-          "subtitleFontStyle":"italic",
-          "subtitleFontSize":10,
-          "anchor": "start",
-          "color": "black"
-        },
-    "config": {"background": "#e6edf0"},
-    "height":380,
-    "width": 300,
-    "mark": {
-      "type": "arc",
-      "innerRadius": 80,
-      "stroke": "#2e2f2f",
-      "tooltip": true
-    },
-    "encoding": {
-      "theta": {"field": "Percentage Dominance", "type": "quantitative"},
-      "color": {
-        "field": "Cryptocurrency",
-        "type": "nominal",
-        "scale": {"scheme": "darkblue"},
-        "sort": "ascending",
-        "legend": {"orient": "left", "fillColor": "#e6edf0", "padding": 3}
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://api.allorigins.win/raw?url=https://api.nomics.com/v1/currencies/ticker?key=m_c811a6982d88a3481b6baeb850f497236549ea69&ids&ids=BTC,ETH,XRP&interval=1d,30d&convert=EUR&platform-currency=ETH&per-page=10&page=1"
+  },
+  "title": {
+    "text": " Chart 3: Market Dominance of Top Cryptocurrencies",
+    "subtitle": " Percentage market dominance using Nomics API source: nomics.com",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "transform": [
+    {
+      "filter": {
+        "field": "currency",
+        "oneOf": ["BTC", "ETH", "XRP", "BNB", "ADA", "SOL", "USDT", "DOGE"]
       }
     }
+  ],
+  "config": {"background": "#e6edf0"},
+  "height": 380,
+  "width": 300,
+  "mark": {
+    "type": "arc",
+    "innerRadius": 80,
+    "stroke": "#2e2f2f",
+    "tooltip": true
+  },
+  "encoding": {
+    "theta": {"field": "market_cap_dominance", "type": "quantitative"},
+    "color": {
+      "field": "name",
+      "title": "Cryptocurrency",
+      "type": "nominal",
+      "scale": {"scheme": "darkblue"},
+      "sort": "ascending",
+      "legend": {"orient": "left", "fillColor": "#e6edf0", "padding": 3}
+    }
   }
+}
