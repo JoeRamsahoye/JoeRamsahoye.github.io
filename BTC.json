@@ -12,7 +12,7 @@
     "subtitleColor": "black"
   },
   "data": {
-    "url": "https://rest.coinapi.io/v1/ohlcv/BTC/USD/history?period_id=8HRS&time_start=2021-02-06T00:00:00&limit=100000&include_empty_items=false&apikey=026BA7A8-C31D-48C3-B4A8-169C6FD15BF4"
+    "url": "https://rest.coinapi.io/v1/ohlcv/BTC/USD/history?period_id=8HRS&time_start=2021-02-06T00:00:00&limit=100000&include_empty_items=false&apikey=92B6B077-C0EF-434B-B876-82F597B782DF"
   },
   "height": 350,
   "width": 350,
