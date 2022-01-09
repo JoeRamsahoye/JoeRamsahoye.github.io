@@ -45,6 +45,18 @@
   </div>
 
   <p class=Question><span class="bold">How much power does Elon Musk have over the cryptocurrency market?</span></p>
+
+  <p class=title1><span class="bold">The aims of my project</span></p>
+
+<p class=title3><span>It is without question that Elon Musk is one of the most powerful public figures in the world. He is known to be quite a controversial character, which mostly stems from his unfiltered use of social media and wild entrepreneur ideas dissimilar to other influential high net worth individuals. In recent years, he has become infatuated with the growing world of cryptocurrencies. In February 2021, his company Tesla announced they had purchased $1.5bn of Bitcoin (the largest cryptocurrency).  He also regularly posts cryptocurrency related items on his twitter feed which attract lots of attention in the forms of likes and retweets and is most notably known for poking fun at one cryptocurrency, Dogecoin. This cryptocurrency was set up as a joke with no fundamental purpose in 2013 to make fun at the wild speculation around cryptocurrencies at the time. However, in recent years the coin has gathered serious media amassing a market cap of $22,523,772,309 making it the 12th largest coin on the market and many attribute this to Elon Musk.
+  Hence, in this project, I aim to investigate, through the means of chart and regression analysis, the impact that Elon Musk’s actions have on the cryptocurrency market.
+  </span></p>
+
+<p class=title1><span class="bold">The data I used and how this was accessed</span></p>
+
+<p class=title3><span>In Chart 1 used daily spot data from Binance which was available in csv files segregated by month. Hence, the data had to be merged for analysis to be carried out. The merging process will be described in detail in the next section. Charts 2, 4 and 6 used data from yahoo finance and this was accessed using python through installing the ‘yfinance’ module in google colab. Chart 2 used data from Nomics’ API, this proved difficult for two reasons. The first one being that they do not offer a free API so I had to pay the small sum of $1 for a key and the other reason being that I encountered a CORS issue so had to use a ‘CORS reverse proxy, whereby the URI-encoded the API’s URL, and then put the prefix ‘https://api.allorigins.win/raw?url=’ beforehand, which circumvented the issue by making the system think I was within a browser. Chart 5 on Tesla used Alpha Vantages’ API, however due to limitations in the customisability of the API, not allowing me to select a date range caused difficulties in making an interactive chart later. So I decided to download the data by using ‘=csv’ at the end of URL and then clean using python. Charts 7 and 8 used CoinAPI. 
+</span></p>
+
   
   <p class=title1><span class="bold">Section 1 - Looking at the cryptocurrency market as a whole to identify extreme market periods and potential outliers</span></p>
 
@@ -61,7 +73,7 @@
   </div>
 
 
-  <p class=title1><span class="bold">Section 2 - Looking at the correlation between the two most dominant cryptocurrencys to investigate how the market moves together </span></p>
+  <p class=title1><span class="bold">Section 2 - Looking at corellations in price between Bitcoin with high market cap coins and small market cap coins to aid in determing factors for price movements </span></p>
 
 
   <div class="container">
@@ -94,8 +106,8 @@
     <!--Chart 3-->
     <div class="chart" id="chart3">
       <script>
-        var myChart5 = "TSLABTCbuy.json";
-        vegaEmbed('#chart5', myChart5);
+        var myChart3 = "TSLABTCbuy.json";
+        vegaEmbed('#chart3', myChart3);
       </script>
     </div>
 
@@ -146,23 +158,13 @@
 
 </div>
 
-<p class=title1><span class="bold">The aims of my project</span></p>
 
-<p class=title3><span>It is without question that Elon Musk is one of the most powerful public figures in the world. He is known to be quite a controversial character, which mostly stems from his unfiltered use of social media and wild entrepreneur ideas dissimilar to other influential high net worth individuals. In recent years, he has become infatuated with the growing world of cryptocurrencies. In February 2021, his company Tesla announced they had purchased $1.5bn of Bitcoin (the largest cryptocurrency).  He also regularly posts cryptocurrency related items on his twitter feed which attract lots of attention in the forms of likes and retweets and is most notably known for poking fun at one cryptocurrency, Dogecoin. This cryptocurrency was set up as a joke with no fundamental purpose in 2013 to make fun at the wild speculation around cryptocurrencies at the time. However, in recent years the coin has gathered serious media amassing a market cap of $22,523,772,309 making it the 12th largest coin on the market and many attribute this to Elon Musk.
-  Hence, in this project, I aim to investigate, through the means of chart and regression analysis, the impact that Elon Musk’s actions have on the cryptocurrency market.
-  </span></p>
-
-<p class=title1><span class="bold">The data I used and how this was accessed</span></p>
-
-<p class=title3><span>In Chart 1 used daily spot data from Binance which was available in csv files segregated by month. Hence, the data had to be merged for analysis to be carried out. The merging process will be described in detail in the next section. Charts 2, 4 and 6 used data from yahoo finance and this was accessed using python through installing the ‘yfinance’ module in google colab. Chart 2 used data from Nomics’ API, this proved difficult for two reasons. The first one being that they do not offer a free API so I had to pay the small sum of $1 for a key and the other reason being that I encountered a CORS issue so had to use a ‘CORS reverse proxy, whereby the URI-encoded the API’s URL, and then put the prefix ‘https://api.allorigins.win/raw?url=’ beforehand, which circumvented the issue by making the system think I was within a browser. Chart 5 on Tesla used Alpha Vantages’ API, however due to limitations in the customisability of the API, not allowing me to select a date range caused difficulties in making an interactive chart later. So I decided to download the data by using ‘=csv’ at the end of URL and then clean using python. Charts 7 and 8 used CoinAPI. 
-</span></p>
 
 <p class=title1><span class="bold">Challenges in data cleaning and/or analysis, and the tools you used to overcome them</span></p>
 
 <p class=title3><span>Chart 1 required the most data cleaning and analysis. Each cryptocurrency had its own daily data for each calendar month e.g. BTCUSDT-1d-2019-07.csv. Therefore, the csv files of each month had to be merged to make the full data set for one cryptocurrency. This was achieved by running a script in terminal which can be found here. The closing price column of each data set was then copy and pasted into an excel spreadsheet for analysis. Daily returns for each cryptocurrency were then calculated using a loop in Stata to make the process less tedious - the code can be found here. I originally downloaded  15m data for this chart however the data set was too large to be uploaded to GitHub and it didn’t chart well for obvious reasons  thus I acquired lower frequency data. 
   Furthermore, to obtain the Dogecoin related tweets surrounding Chart 8, I scraped tweets from twitter. In my first attempt I imported the module ‘twitterscraper’ in google colab however I received an error as ‘twitterscraper’ is no longer working. So I had to use an alternative method using the module ‘insert’ – click here for the code.
 </span></p>
-
 
 
 <p class=title1><span class="bold">Conclusions of the project</span></p>
