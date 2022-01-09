@@ -4,7 +4,7 @@
   "description": "Bitcoin close",
   "title": {
     "text": " Chart 7: Bitcoin Price",
-    "subtitle": "8 Hour interval price at close in $ using CoinApi's API source: CoinAPI.com",
+    "subtitle": "Weekly price in $ using CoinApi's API source: CoinAPI.com",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "start",
@@ -55,7 +55,7 @@
     "x": {
       "field": "time_period_start",
       "type": "temporal",
-      "title": "Date in 2009",
+      "title": "Date",
       "axis": {
         "format": "%m/%d",
         "labelAngle": -45,
