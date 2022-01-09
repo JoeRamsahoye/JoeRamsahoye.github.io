@@ -17,6 +17,18 @@ header {
   text-align: center;  
 }
 
+.Question
+{
+  /*font-family: 'Helvetica Neue', sans-serif;*/
+  font-family: "Calibri";
+  color: black;
+  font-size: 40px; 
+  letter-spacing: 1px; 
+  line-height: 1; 
+  text-align: center;
+}
+
+
 .title1 {
   /*font-family: 'Helvetica Neue', sans-serif;*/
   font-family: "Calibri";
@@ -90,19 +102,32 @@ header {
   height: flex;
   border: #e6edf0 solid 4px;
   border-radius: 10px;
-  margin: 10px;
+  margin: 0px;
   padding: 8px;
   background-color: #e6edf0;
 }
 
 .tweet {
   font-family: Arial, Helvetica, sans-serif;
-  vertical-align: center;
+  flex-flow: row wrap;
   width: 290;
   height: flex;
   border: #e6edf0 solid 0px;
   border-radius: 0px;
   margin: 0px;
+  padding: 0px;
+  padding-top: 0px;
+  background-color: #e6edf0
+}
+
+.tweet1 {
+  font-family: Arial, Helvetica, sans-serif;
+  flex-flow: row wrap;
+  width: 290;
+  height: flex;
+  border: #e6edf0 solid 0px;
+  border-radius: 0px;
+  margin: 18px;
   padding: 0px;
   padding-top: 0px;
   background-color: #e6edf0
@@ -119,6 +144,25 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+
+
+
+.wrapper {
+  border: 1px solid blue;
+}
+.div1 {
+  display: inline-block;
+  width:120px;
+  height:120px;
+  border: 1px solid red;
+}
+.div2 {
+  display: inline-block;
+  width:160px;
+  height:160px;
+  border: 1px solid green;
 }
 
 /* Button code */
