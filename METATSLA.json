@@ -1,0 +1,62 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {"background": "#e6edf0"},
+  "title": {
+    "text": "Chart 5: Tesla Share Price",
+    "subtitle": " Daily price at close in $ using AlphaVantage api source: alphavantage.com",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "url": "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=TSLA&interval=5min&outputsize=full&apikey=S1DLPXISA0IMJP95&datatype=csv",
+    "format": {"type": "csv"}
+  },
+  "height": 350,
+  "width": 350,
+  "mark": {
+    "type": "area",
+    "clip": true,
+    "line": {"color": "#0d84b3"},
+    "color": {
+      "x1": 1,
+      "y1": 1,
+      "x2": 1,
+      "y2": 0,
+      "gradient": "linear",
+      "stops": [
+        {"offset": 0.2, "color": "#e6edf0"},
+        {"offset": 1, "color": "#0d84b3"}
+      ]
+    }
+  },
+  "params": [{
+    "name": "grid",
+    "select": "interval",
+    "bind": "scales"
+  }],
+  "encoding": {
+    "x": {
+      "field": "timestamp",
+      "type": "temporal",
+      "title": "Date",
+      "axis": {"grid": false},
+      "scale": {
+        "domainMin": {"year": 2021, "month": "feb", "date": 6},
+        "domainMax": {"year": 2021, "month": "dec", "date": 25}
+      }
+    },
+    "y": {
+      "field": "close",
+      "type": "quantitative",
+      "title": "Price at close ($)",
+      "axis": {"grid": false},
+      "scale": {"domain": [500, 1400]}
+    },
+    "tooltip": [
+      {"field": "timestamp", "title": "Date", "type": "temporal"},
+      {"field": "close", "title": "Price at close ($)", "type": "quantitative"}
+    ]
+  }
+}
