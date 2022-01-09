@@ -1,5 +1,5 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "config": {"background": "#e6edf0"},
   "description": "Bitcoin close",
   "title": {
@@ -11,14 +11,15 @@
     "color": "black",
     "subtitleColor": "black"
   },
-  "data": {
-    "url": "https://rest.coinapi.io/v1/ohlcv/BTC/USD/history?period_id=8HRS&time_start=2021-02-06T00:00:00&limit=100000&include_empty_items=false&apikey=92B6B077-C0EF-434B-B876-82F597B782DF"
+  "width": 400,
+  "height": 400,
+   "data": {
+    "url": "https://rest.coinapi.io/v1/ohlcv/BTC/USD/history?period_id=7DAY&time_start=2021-02-06T00:00:00&limit=100000&include_empty_items=false&apikey=D7F1397B-3B55-467B-9C87-B9DBCFE00239"
   },
-  "height": 350,
-  "width": 350,
   "transform": [
     {"calculate": "'$'+datum.price_close", "as": "price_close_dollars"},
     {"calculate": "'$'+datum.price_high", "as": "price_high_dollars"},
+    {"calculate": "'$'+datum.price_low", "as": "price_low_dollars"},
     {
       "calculate": "month(datum.time_period_start)",
       "as": "month_time_period_start"
@@ -26,22 +27,6 @@
     {"filter": "datum.month_time_period_start>minMonth"},
     {"filter": "datum.month_time_period_start<maxMonth"}
   ],
-  "mark": {
-    "type": "area",
-    "clip": true,
-    "line": {"color": "#0d84b3"},
-    "color": {
-      "x1": 1,
-      "y1": 1,
-      "x2": 1,
-      "y2": 0,
-      "gradient": "linear",
-      "stops": [
-        {"offset": 0.2, "color": "#e6edf0"},
-        {"offset": 1, "color": "#0d84b3"}
-      ]
-    }
-  },
   "params": [
     {
       "name": "minMonth",
@@ -70,24 +55,48 @@
     "x": {
       "field": "time_period_start",
       "type": "temporal",
+      "title": "Date in 2009",
       "axis": {
-        "title": "Date",
+        "format": "%m/%d",
+        "labelAngle": -45,
         "grid": false,
-        "labelSeparation": 20,
-        "ticks": false
+        "title": "Date in 2009"
       }
     },
     "y": {
-      "field": "price_close",
       "type": "quantitative",
-      "title": "Closing Price ($)",
-      "axis": {"grid": false}
+      "scale": {"zero": false},
+      "axis": {"title": "Price", "grid": false}
     },
     "tooltip": [
       {"field": "time_period_start", "title": "Date", "type": "temporal"},
-      {"field": "price_close_dollars", "title": "Closing Price"},
       {"field": "volume_traded", "title": "Volume", "type": "quantitative"},
+      {"field": "price_low_dollars", "title": "Low"},
       {"field": "price_high_dollars", "title": "High"}
-    ]
-  }
+    ],
+    "color": {
+      "condition": {
+        "test": "datum.price_open < datum.price_close",
+        "value": "#06982d"
+      },
+      "value": "#ae1325"
+    }
+  },
+  "layer": [
+    {
+      "mark": "rule",
+      "encoding": {
+        "y": {"field": "price_low"},
+        "y2": {"field": "price_high"}
+      }
+    },
+    {
+      "mark": "bar",
+      "encoding": {
+        "y": {"field": "price_open"},
+        "y2": {"field": "price_close"}
+      }
+    }
+  ]
 }
+
