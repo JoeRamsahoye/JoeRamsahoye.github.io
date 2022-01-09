@@ -54,7 +54,7 @@
 
 <p class=title1><span class="bold">The data I used and how this was accessed</span></p>
 
-<p class=title3><span>In Chart 1 used daily spot data from Binance which was available in csv files segregated by month. Hence, the data had to be merged for analysis to be carried out. The merging process will be described in detail in the next section. Charts 2, 4 and 6 used data from yahoo finance and this was accessed using python through installing the ‘yfinance’ module in google colab. Chart 2 used data from Nomics’ API, this proved difficult for two reasons. The first one being that they do not offer a free API so I had to pay the small sum of $1 for a key and the other reason being that I encountered a CORS issue so had to use a ‘CORS reverse proxy, whereby the URI-encoded the API’s URL, and then put the prefix ‘https://api.allorigins.win/raw?url=’ beforehand, which circumvented the issue by making the system think I was within a browser. Chart 5 on Tesla used Alpha Vantages’ API, however due to limitations in the customisability of the API, not allowing me to select a date range caused difficulties in making an interactive chart later. So I decided to download the data using python with the AlphaVantage package - click here to see the code. Charts 7 and 8 used CoinAPI. 
+<p class=title3><span>In Chart 1 used daily spot data from Binance which was available in csv files segregated by month. Hence, the data had to be merged for analysis to be carried out. The merging process will be described in detail in the next section. Charts 2, 4 and 6 used data from yahoo finance and this was accessed using python through installing the ‘yfinance’ module in google colab. Chart 2 used data from Nomics’ API, this proved difficult for two reasons. The first one being that they do not offer a free API so I had to pay the small sum of $1 for a key. Chart 5 on Tesla used Alpha Vantages’ API, however due to limitations in the customisability of the API, not allowing me to select a date range caused difficulties in making an interactive chart later. So I decided to download the data using python with the AlphaVantage package - click here to see the code. Charts 7 and 8 used CoinAPI. 
 </span></p>
 
   
@@ -72,7 +72,9 @@
     
   </div>
 
-
+  <p class=title3><span> Script for merging csv files for chart 1 - click <a class="textLink" href="https://github.com/JoeRamsahoye/JoeRamsahoye.github.io/blob/main/CSVmerg.doc"> here</a>. 
+    <br> Stata Loop for calculating returns - click <a class="textLink" href="https://github.com/JoeRamsahoye/JoeRamsahoye.github.io/blob/main/Chart1_Loop.do"> here</a>.
+  
   <p class=title1><span class="bold">Section 2 - Looking at corellations in price between Bitcoin with high market cap coins and small market cap coins to aid in determing factors for price movements </span></p>
 
 
@@ -98,6 +100,9 @@
 
   </div>
 
+  <p class=title3><span> Python notebook for chart 2 - click <a class="textLink" href="https://colab.research.google.com/drive/1bfSaNmhF9KM5qeaIDreuw4RB84ZzTEYc"> here</a>. 
+    <br> Python notebook for chart 4 - click <a class="textLink" href="https://colab.research.google.com/drive/1fn9So9T6pNnbW_ND0Cth5NMNwPxwKxxl"> here</a>.
+    
   <p class=title1><span class="bold">Section 3 - Effect of Tesla buying $1.5bn of Bitcoin on the price of Bitcoin and Tesla</span></p>
 
 
@@ -130,6 +135,8 @@
 
   </div>
 
+  <p class=title3><span> Python notebook for chart 5 - click <a class="textLink" href="https://colab.research.google.com/drive/1IuK84THgUcc96d-iwuy6GJN2xoZN7U_e"> here</a>. 
+    <br> Python notebook for chart 6 - click <a class="textLink" href="https://colab.research.google.com/drive/1Mj3L5X14vVHRbFmBSZsi-sN9cr0Vnr7R"> here</a>. 
   
   <p class=title1><span class="bold">Section 4 - Effect of Elon Musks Tweets on the price of Dogecoin</span></p>
 
@@ -157,6 +164,8 @@
   </div>
 
 </div>
+
+<p class=title3><span> Python notebook for twitter scraper - click <a class="textLink" href="https://colab.research.google.com/drive/1VnbVBQ1IEuStYcDQFiMRIFtRJx8OBv0L"> here</a>.
 
 
 
