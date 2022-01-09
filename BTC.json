@@ -60,7 +60,7 @@
         "format": "%m/%d",
         "labelAngle": -45,
         "grid": false,
-        "title": "Date in 2009"
+        "title": "Date"
       }
     },
     "y": {
