@@ -45,10 +45,6 @@
   </div>
   
   <p class=title1><span class="bold">Section 1 - Looking at the cryptocurrency market as a whole to identify extreme market periods</span></p>
-  <p class=title3><span>Chart 1 shows daily market returns at close for six large marketcap cryptocurrencies.This circle plot lets us identify periods of high volatility in the market 
-    and also lets us see more specifically what coins are 1) most volatile and 2) tend to diverge from the returns of the rest of market. 
-    This will help form areas of interest for analysis later on.
-   </span></p>
 
   <div class="container">
 
@@ -62,17 +58,10 @@
     
   </div>
 
-  <p class=title3><span> From Chart 1, we can see there are peiods of high volatility in 2018 Q1 and then even more so in 2020 Q4 and and 2021 Q1.
-  But most noticably of all, when selecting coins to isolate from the drop down box, it is obvious that Dogecoin is by 
-  far the most volatile and also seems to diverge the most from the rest of the market. Reasons for this will be investigated later on.</span></p>
 
   <p class=title1><span class="bold">Section 2 - Looking at the correlation between the two most dominant cryptocurrencys to investigate how the market moves together </span></p>
 
-  <p class=title3><span> Charts 3 visualises the proportional market dominance of the 8 largest cryptocurrencies. 
-    This will aid in better understanding why some coins may diverge away from the returns of the rest of the market.
-    Chart 2 regresses Bitcoin on Ethereum to investigate how correlated the two larget cryptocurrencies are. 
-   Given the findings from Chart 1, it would be approiate to regresses Bitcoin on Dogecoin to investigate how correlated the most dominant and a much weaker coin are 
-   given what we have seen from Dogecoins returns thus far. This is shown in chart 4</span></p>
+
   <div class="container">
 
     <!--Chart 2-->
@@ -95,23 +84,15 @@
 
   </div>
 
-  <p class=title3><span> From Chart 2, we can see clearly that Bitcoin and Ethereum hold majority dominance over the rest of the market and combined are 30 times more dominant than Tether (the third most dominant coin). 
-  From Chart 3, we can see that Bitcoin and Ethereum are strongly correlated which is unsurpsing given their relative dominance
-  However from Chart 4, we can see that Bitcoin are Dogecoin are much less correlated showing how smaller marketcap coins tend to move more independent of the market perhaps making them more susceptible to external factors/influences </span></p>
-
   <p class=title1><span class="bold">Section 3 - Effect of Tesla buying $1.5bn of Bitcoin on the price of Bitcoin and Tesla</span></p>
 
-  <p class=title3><span>Given Tesla's recent announcement of the purchase of $1.5bn worth of Bitcoin on 8th February 2021. 
-    It would be intersting to see how the market reacted to the news albeit postive or negative given the controversial 
-    nature of Bitcoin and Tesla both for different reasons.
-  </span></p>
 
   <div class="container">
 
     <!--Chart 3-->
     <div class="chart" id="chart3">
       <script>
-        var myChart3 = "METATSLA.json";
+        var myChart3 = "TSLABTCBuy.json";
         vegaEmbed('#chart3', myChart3);
       </script>
     </div>
@@ -134,27 +115,8 @@
 
   </div>
 
-  <p class=title3><span> From Chart 5, we can see a clear decrease in price of Tesla stock 3 months after the annoucement.
-    From Chart 6, we can see a rapid increase in the price of Bitcoin after the announcement.
-    Combing the trends from Charts 5 and 6, a regression of Bitcoin on Tesla yields a negative correlation perhaps suggesting conflicting views/opnions between Bitcoin and Tesla investors about both stocks.
-  </span></p>
+  
   <p class=title1><span class="bold">Section 4 - Effect of Elon Musks Tweets on the price of Dogecoin</span></p>
-
-  <p class=title3><span> From our previous analysis, we have seen a brief insight into how the markets behave. 
-    In section 3, we saw the power and influence that Elon Musk actions have on the the most dominant cryptocurrency through his company Tesla.
-    We now turn back to section 1 and 2, where we saw that Dogecoin's returns tend to deviate away from the rest of the market. 
-    But why is this? To understand why, we need to know what Dogecoin's fundamental principles are and its usecase.
-    The problem with this is that Dogecoin does not have any fundamentals or a usecase. In fact, it was set up purely as a joke or "memecoin"
-    as are more commonly known nowadays so its intrinsic value is zero. The coin was released in 2013 to make fun at the wild speculation around
-    cryptocurrencies at the time. However, in recent years the coin has gathered serious media attention largely due to Elon Musk poking fun
-    at it on his twitter feed.
-  </span></p>
-  <p class=title3><span> The final chart shows Dogecoins price in 2021 with 8 hour intervals to ensure raid price movements are picked up.
-    Dogecoin related tweets from @elonmusk are also embedded displaying the date and time of each tweet so analysis can be carried out on
-    the chart to determine if these tweets result in significant price movements.
-
-  </span></p>
-
 
   <div class="container">
 
@@ -181,12 +143,27 @@
 
 </div>
 
-<p class=title3><span> After adjusting the interactive slider and using the charts tooltip. I WOULD BE ABLE TO SEE IF COINAPI WOULD ACTUALLY
-  BE SOUND AND GIVE ME MORE THAN 100 REQUESTS PER DAY FOR FUCK SAKE. We can see that each one of the tweets 
-  presents indcues a movement in price be it positive or negative depending on the nature of the tweet. This further emphasizes Elon Musk's 
-  power over the cryptocurrency market as investors are willing to make financial decisions on an asset with no real value based of jokes
-  from a twitter account.
+<p class=title1><span class="bold">The aims of my project</span></p>
 
-  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Doge meme shield (legendary item) <a href="https://t.co/CeomU9q84c">pic.twitter.com/CeomU9q84c</a></p>&mdash; Elon Musk (@elonmusk) <a href="https://twitter.com/elonmusk/status/1366477626429169666?ref_src=twsrc%5Etfw">March 1, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p class=title3><span>It is without question that Elon Musk is one of the most powerful public figures in the world. He is known to be quite a controversial character, which mostly stems from his unfiltered use of social media and wild entrepreneur ideas dissimilar to other influential high net worth individuals. In recent years, he has become infatuated with the growing world of cryptocurrencies. In February 2021, his company Tesla announced they had purchased $1.5bn of Bitcoin (the largest cryptocurrency).  He also regularly posts cryptocurrency related items on his twitter feed which attract lots of attention in the forms of likes and retweets and is most notably known for poking fun at one cryptocurrency, Dogecoin. This cryptocurrency was set up as a joke with no fundamental purpose in 2013 to make fun at the wild speculation around cryptocurrencies at the time. However, in recent years the coin has gathered serious media amassing a market cap of $22,523,772,309 making it the 12th largest coin on the market and many attribute this to Elon Musk.
+  Hence, in this project, I aim to investigate, through the means of chart and regression analysis, the impact that Elon Musk’s actions have on the cryptocurrency market.
+  </span></p>
 
-  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Doge Barking at the Moon <a href="https://t.co/QFB81D7zOL">pic.twitter.com/QFB81D7zOL</a></p>&mdash; Elon Musk (@elonmusk) <a href="https://twitter.com/elonmusk/status/1382552587099062272?ref_src=twsrc%5Etfw">April 15, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p class=title1><span class="bold">The data I used and how this was accessed</span></p>
+
+<p class=title3><span>In Chart 1 used daily spot data from Binance which was available in csv files segregated by month. Hence, the data had to be merged for analysis to be carried out. The merging process will be described in detail in the next section. Charts 2, 4 and 6 used data from yahoo finance and this was accessed using python through installing the ‘yfinance’ module in google colab. Chart 2 used data from Nomics’ API, this proved difficult for two reasons. The first one being that they do not offer a free API so I had to pay the small sum of $1 for a key and the other reason being that I encountered a CORS issue so had to use a ‘CORS reverse proxy, whereby the URI-encoded the API’s URL, and then put the prefix ‘https://api.allorigins.win/raw?url=’ beforehand, which circumvented the issue by making the system think I was within a browser. Chart 5 on Tesla used Alpha Vantages’ API, however due to limitations in the customisability of the API, not allowing me to select a date range caused difficulties in making an interactive chart later. So I decided to download the data by using ‘=csv’ at the end of URL and then clean using python. Charts 7 and 8 used CoinAPI. 
+</span></p>
+
+<p class=title1><span class="bold">Challenges in data cleaning and/or analysis, and the tools you used to overcome them</span></p>
+
+<p class=title3><span>Chart 1 required the most data cleaning and analysis. Each cryptocurrency had its own daily data for each calendar month e.g. BTCUSDT-1d-2019-07.csv. Therefore, the csv files of each month had to be merged to make the full data set for one cryptocurrency. This was achieved by running a script in terminal which can be found here. The closing price column of each data set was then copy and pasted into an excel spreadsheet for analysis. Daily returns for each cryptocurrency were then calculated using a loop in Stata to make the process less tedious - the code can be found here. I originally downloaded  15m data for this chart however the data set was too large to be uploaded to GitHub and it didn’t chart well for obvious reasons  thus I acquired lower frequency data. 
+  Furthermore, to obtain the Dogecoin related tweets surrounding Chart 8, I scraped tweets from twitter. In my first attempt I imported the module ‘twitterscraper’ in google colab however I received an error as ‘twitterscraper’ is no longer working. So I had to use an alternative method using the module ‘insert’ – click here for the code.
+</span></p>
+
+
+
+<p class=title1><span class="bold">Conclusions of the project</span></p>
+
+<p class=title3><span>From the visualisations presented, Elon Musk does hold great influence over the cryptocurrency market. We can see that, despite the $1trn market cap of Bitcoin, we saw a price increase of around 20% after the announcement of Tesla’s purchase showing his power to induce herding in the market. On the other hand, we saw Tesla’s share price fall leading the months after the announcement resulting in a negative correlation between the Bitcoin and Tesla share price. This could suggest conflicting view and opinions of Tesla and Bitcoin investors. However, the R2 value was 0.07 so this was a weak correlation which could have attributed to other factors. Furthermore, when looking at dogecoin, we observed a weak correlation when regressed on Bitcoin with an R2 of 0.01. This shows that dogecoin tends to move independent of the market which would make sense due its much smaller market cap compared with Bitcoin but also its lacking fundamentals perhaps creating a different kind of investor as opposed to those in the rest of the market. When analysing the chart and aligning it with viral dogecoin tweets from @elonmusk we can see sharp price movements showing his influence over the coin.
+</span></p>
+
