@@ -220,101 +220,65 @@ touch-action: manipulation;
 }
 
 
-@media (min-width: 768px) {
-.button-74 {
-  min-width: 120px;
-  padding: 0 25px;
+ /* The width adjusts the site to the device in normal view and landscape view */
+    
+ @viewport {
+  zoom: 1.0;
+  width: extend-to-zoom;
 }
-}
+/*----------------------------------------------------------------------------------------------------------------
+                                      DIFFERENT SCREEN SIZES
+-----------------------------------------------------------------------------------------------------------------*/
 
-
-/* One column*/
-@media only screen and (min-width: 250px) {
-  .grid_items {
-    grid-template-columns: 100%;
-    max-width: 420px; 
-    margin: 0 auto 0 auto !important;
-	padding: 0 5 0 5; 
-    grid-column-gap: 10px;
-    grid-row-gap: 40px;
-    text-align: center;
-  }
-
-  .wrap {
-    grid-template-columns: 100%;
-    max-width: 360px; 
-    margin: 0 auto 0 auto !important;
-	  padding: 0 5 0 5; 
-    grid-column-gap: 10px;
-    grid-row-gap: 40px;
-    text-align: center;
-  }
-  .grid_items > div {
-    padding: 10px;
-  }
-  .rubric {
-    text-align: left;
-  }
-}
-
-/* Two columns*/
-@media only screen and (min-width: 900px) {
-  .grid_items, .wrap {
-    grid-template-columns: 47.5% 47.5%;
-    max-width: 880px; 
-    margin: 0 auto 0 auto !important;
-	padding: 0 5 0 5; 
-    grid-column-gap: 10px;
-    grid-row-gap: 40px;
-    text-align: left;
-  }
-  .grid_items > div {
-    padding: 10px;
-  }
-}
-
-/* Three columns*/
-@media only screen and (min-width: 1400px) {
-  .grid_items, .wrap {
-    grid-template-columns: 30% 30% 30%;
-    max-width: 1400px; 
-    margin: 0 auto 0 auto !important;
-	padding: 0 5 0 5; 
-    grid-column-gap: 20px;
-    grid-row-gap: 50px;
-  }
-  
-  .grid_items > div {
-    padding: 10px;
-  }
-}
-
-/* Four columns*/
-@media only screen and (min-width: 1800px) {
-  .grid_items, .wrap {
-    grid-template-columns: 25% 25% 25% 25%;
-    max-width: 1900px; 
-    margin: 0 auto 0 auto !important;
-	padding: 0 5 0 5; 
-    grid-column-gap: 20px;
-    grid-row-gap: 50px;
-  }
-  .grid_items > div {
-    padding: 10px;
-  }
-}
-
-@media (max-width: 480px) {
+@media screen and (max-width: 959px) {
   body {
       overflow-x: hidden;
-  }
-  .heading {
-      font-size: 32px;
+      margin-left: 3%;
+      margin-right: 3%;
   }
   .chart {
-      width: 380px;
+      width: 95%;
   }
-  .title1 {
-      font-size: 15px;
+  .bigchart{
+      width: 95%;
+  }
+  p {
+      font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .body {
+      overflow: hidden;
+      margin-left: 3%;
+      margin-right: 3%;
+  }
+  .chart {
+      width: 95%;
+  }
+  .bigchart {
+      width: 95%;
+  }
+}
+
+p {
+  font-size: 21px;
+}
+
+@media screen and (max-width: 320px) {
+  body {
+      overflow-x: hidden;
+      margin-left: 3%;
+      margin-right: 3%;
+  }
+  .chart {
+      width: 95%;
+  }
+  
+  .bigchart{
+      width: 40%;
+  }
+  P {
+      font-size: 20px;
   }
 }
