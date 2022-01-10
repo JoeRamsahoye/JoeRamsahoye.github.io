@@ -13,8 +13,8 @@
   },
   "width": 400,
   "height": 400,
-   "data": {
-    "url": "https://rest.coinapi.io/v1/ohlcv/BTC/USD/history?period_id=7DAY&time_start=2021-02-06T00:00:00&limit=100000&include_empty_items=false&apikey=D7F1397B-3B55-467B-9C87-B9DBCFE00239"
+  "data": {
+    "url": "https://rest.coinapi.io/v1/ohlcv/BTC/USD/history?period_id=7DAY&time_start=2021-02-06T00:00:00&limit=100000&include_empty_items=false&apikey=57B9B077-2893-44AC-8926-C5DF44F3A488"
   },
   "transform": [
     {"calculate": "'$'+datum.price_close", "as": "price_close_dollars"},
@@ -57,8 +57,6 @@
       "type": "temporal",
       "title": "Date",
       "axis": {
-        "format": "%m/%d",
-        "labelAngle": -45,
         "grid": false,
         "title": "Date"
       }
@@ -77,26 +75,19 @@
     "color": {
       "condition": {
         "test": "datum.price_open < datum.price_close",
-        "value": "#06982d"
+        "value": "skyblue"
       },
-      "value": "#ae1325"
+      "value": "#0f6d96"
     }
   },
   "layer": [
     {
       "mark": "rule",
-      "encoding": {
-        "y": {"field": "price_low"},
-        "y2": {"field": "price_high"}
-      }
+      "encoding": {"y": {"field": "price_low"}, "y2": {"field": "price_high"}}
     },
     {
       "mark": "bar",
-      "encoding": {
-        "y": {"field": "price_open"},
-        "y2": {"field": "price_close"}
-      }
+      "encoding": {"y": {"field": "price_open"}, "y2": {"field": "price_close"}}
     }
   ]
 }
-
