@@ -10,7 +10,7 @@ footer {
 
 header {
   font-family: "Comic Sans MS";
-  font-size: 80px; 
+  font-size: 50px; 
   font-weight: bold;
   letter-spacing: 1px; 
   line-height: 1; 
@@ -87,7 +87,7 @@ header {
 
 .chart {
   font-family: Arial, Helvetica, sans-serif;
-  width: 410;
+  width: flex;
   height: flex;
   border: #e6edf0 solid 4px;
   border-radius: 10px;
@@ -220,65 +220,84 @@ touch-action: manipulation;
 }
 
 
- /* The width adjusts the site to the device in normal view and landscape view */
-    
- @viewport {
-  zoom: 1.0;
-  width: extend-to-zoom;
-}
-/*----------------------------------------------------------------------------------------------------------------
-                                      DIFFERENT SCREEN SIZES
------------------------------------------------------------------------------------------------------------------*/
+ /* The below CSS is taken from Richard's page, and sets a different number of columns (of graphs) on the page depending on the size of the screen that is being used. */
+/* E.g., a typical phone displays one column, and iPad displays two, and a typical computer screen displays three. */
+/* ------------------------------------------------------------------------------
+	DIFFERENT SCREEN SIZES
+-------------------------------------------------------------------------------*/
 
-@media screen and (max-width: 959px) {
-  body {
-      overflow-x: hidden;
-      margin-left: 3%;
-      margin-right: 3%;
+/* One column*/
+@media only screen and (min-width: 250px) {
+  .grid_items {
+    grid-template-columns: 100%;
+    max-width: 420px; 
+    margin: 0 auto 0 auto !important;
+	padding: 0 5 0 5; 
+    grid-column-gap: 10px;
+    grid-row-gap: 40px;
+    text-align: center;
   }
-  .chart {
-      width: 95%;
-  }
-  .bigchart{
-      width: 95%;
-  }
-  p {
-      font-size: 16px;
-  }
-}
 
-@media screen and (max-width: 640px) {
-  .body {
-      overflow: hidden;
-      margin-left: 3%;
-      margin-right: 3%;
+  .wrap {
+    grid-template-columns: 100%;
+    max-width: 360px; 
+    margin: 0 auto 0 auto !important;
+	  padding: 0 5 0 5; 
+    grid-column-gap: 10px;
+    grid-row-gap: 40px;
+    text-align: center;
   }
-  .chart {
-      width: 95%;
+  .grid_items > div {
+    padding: 10px;
   }
-  .bigchart {
-      width: 95%;
+  .rubric {
+    text-align: left;
   }
 }
 
-p {
-  font-size: 21px;
+/* Two columns*/
+@media only screen and (min-width: 900px) {
+  .grid_items, .wrap {
+    grid-template-columns: 47.5% 47.5%;
+    max-width: 880px; 
+    margin: 0 auto 0 auto !important;
+	padding: 0 5 0 5; 
+    grid-column-gap: 10px;
+    grid-row-gap: 40px;
+    text-align: left;
+  }
+  .grid_items > div {
+    padding: 10px;
+  }
 }
 
-@media screen and (max-width: 320px) {
-  body {
-      overflow-x: hidden;
-      margin-left: 3%;
-      margin-right: 3%;
-  }
-  .chart {
-      width: 95%;
+/* Three columns*/
+@media only screen and (min-width: 1400px) {
+  .grid_items, .wrap {
+    grid-template-columns: 30% 30% 30%;
+    max-width: 1400px; 
+    margin: 0 auto 0 auto !important;
+	padding: 0 5 0 5; 
+    grid-column-gap: 20px;
+    grid-row-gap: 50px;
   }
   
-  .bigchart{
-      width: 40%;
+  .grid_items > div {
+    padding: 10px;
   }
-  P {
-      font-size: 20px;
+}
+
+/* Four columns*/
+@media only screen and (min-width: 1800px) {
+  .grid_items, .wrap {
+    grid-template-columns: 25% 25% 25% 25%;
+    max-width: 1900px; 
+    margin: 0 auto 0 auto !important;
+	padding: 0 5 0 5; 
+    grid-column-gap: 20px;
+    grid-row-gap: 50px;
+  }
+  .grid_items > div {
+    padding: 10px;
   }
 }
