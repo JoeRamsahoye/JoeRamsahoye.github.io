@@ -9,30 +9,19 @@
     "anchor": "start",
     "color": "black"
   },
+  "width": 400,
+  "height": 400,
   "data": {
-    "url": "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=TSLA&interval=5min&outputsize=full&apikey=S1DLPXISA0IMJP95&datatype=csv",
-    "format": {"type": "csv"}
-  },
-  "height": 350,
-  "width": 350,
-  "mark": {
-    "type": "area",
-    "clip": true,
-    "line": {"color": "#0d84b3"},
-    "color": {
-      "x1": 1,
-      "y1": 1,
-      "x2": 1,
-      "y2": 0,
-      "gradient": "linear",
-      "stops": [
-        {"offset": 0.2, "color": "#e6edf0"},
-        {"offset": 1, "color": "#0d84b3"}
-      ]
-    }
+    "url": "https://raw.githubusercontent.com/JoeRamsahoye/JoeRamsahoye.github.io/main/TESLA.csv"
   },
   "transform": [
-    {"calculate": "month(datum.timestamp)", "as": "month_timestamp"},
+    {"calculate": "'$'+datum.close", "as": "price_close_dollars"},
+    {"calculate": "'$'+datum.high", "as": "price_high_dollars"},
+    {"calculate": "'$'+datum.low", "as": "price_low_dollars"},
+    {
+      "calculate": "month(datum.timestamp)",
+      "as": "month_timestamp"
+    },
     {"filter": "datum.month_timestamp>minMonth"},
     {"filter": "datum.month_timestamp<maxMonth"}
   ],
@@ -65,22 +54,35 @@
       "field": "timestamp",
       "type": "temporal",
       "title": "Date",
-      "axis": {"grid": false},
-      "scale": {
-        "domainMin": {"year": 2021, "month": "feb", "date": 6},
-        "domainMax": {"year": 2021, "month": "dec", "date": 25}
-      }
+      "axis": {"grid": false, "title": "Date"}
     },
     "y": {
-      "field": "close",
       "type": "quantitative",
-      "title": "Price at close ($)",
-      "axis": {"grid": false},
-      "scale": {"domain": [500, 1400]}
+      "scale": {"zero": false},
+      "axis": {"title": "Price", "grid": false}
     },
     "tooltip": [
       {"field": "timestamp", "title": "Date", "type": "temporal"},
-      {"field": "close", "title": "Price at close ($)", "type": "quantitative"}
-    ]
-  }
+      {"field": "volume", "title": "Volume", "type": "quantitative"},
+      {"field": "price_low_dollars", "title": "Low"},
+      {"field": "price_high_dollars", "title": "High"}
+    ],
+    "color": {
+      "condition": {
+        "test": "datum.open < datum.close",
+        "value": "skyblue"
+      },
+      "value": "#0f6d96"
+    }
+  },
+  "layer": [
+    {
+      "mark": "rule",
+      "encoding": {"y": {"field": "low"}, "y2": {"field": "high"}}
+    },
+    {
+      "mark": "bar",
+      "encoding": {"y": {"field": "open"}, "y2": {"field": "close"}}
+    }
+  ]
 }
