@@ -139,6 +139,7 @@ header {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  text-align: left;
 }
 
 .container2 {
@@ -220,17 +221,47 @@ user-select: none;
 touch-action: manipulation;
 }
 
-@media only screen and (max-width: 450px) {
+@media screen and (max-width: 959px) {
   body {
-    max-width: 98%;
+      overflow-x: hidden;
+      margin-left: 1%;
+      margin-right: 1%;
   }
-  .container {
-    border-style: none;
-    padding: 1px;
-    gap: 10px 10px;
+  h1 {
+      font-size: 20px;
   }
   .chart {
-    min-width: 350px;
-    padding: 10px
+      width: 95%;
+  }
+  .chart1 {
+      width: 95%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  body {
+      overflow-x: hidden;
+      margin-left: 1%;
+      margin-right: 1%;
+  }
+  .chart {
+      width: 95%;
+  }
+  .chart1 {
+      width: 95%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  body {
+      overflow-x: hidden;
+      margin-left: 1%;
+      margin-right: 1%;
+  }
+  .chart {
+      width: 100%;
+  }
+  .chart1 {
+      width: 100%;
   }
 }
