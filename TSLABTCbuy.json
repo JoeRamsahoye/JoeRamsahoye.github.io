@@ -3,7 +3,7 @@
   "config": {"background": "#e6edf0"},
   "title": {
     "text": "Chart 5: Tesla Share Price",
-    "subtitle": " Daily price at close in $ using AlphaVantage api source: alphavantage.com",
+    "subtitle": "Weekly price at close in $ using AlphaVantage api source: alphavantage.com",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "start",
