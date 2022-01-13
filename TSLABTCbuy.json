@@ -9,8 +9,8 @@
     "anchor": "start",
     "color": "black"
   },
-  "width": 380,
-  "height": 380,
+  "width": 330,
+  "height": 320,
   "data": {
     "url": "https://raw.githubusercontent.com/JoeRamsahoye/JoeRamsahoye.github.io/main/TESLA.csv"
   },

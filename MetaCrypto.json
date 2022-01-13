@@ -48,8 +48,8 @@
       }
     }
   ],
-  "height": 300,
-  "width": 1000,
+  "height": 320,
+  "width":400,
   "mark": {"type": "circle"},
   "encoding": {
     "x": {
