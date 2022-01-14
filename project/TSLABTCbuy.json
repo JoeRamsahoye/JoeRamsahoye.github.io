@@ -12,7 +12,7 @@
   "width": 330,
   "height": 320,
   "data": {
-    "url": "https://raw.githubusercontent.com/JoeRamsahoye/JoeRamsahoye.github.io/main/TESLA.csv"
+    "url": "https://raw.githubusercontent.com/JoeRamsahoye/JoeRamsahoye.github.io/main/project/TESLA.csv"
   },
   "transform": [
     {"calculate": "'$'+datum.close", "as": "price_close_dollars"},
