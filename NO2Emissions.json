@@ -19,7 +19,7 @@
     "mark": {
         "type": "point"
     },
-    "width": 250,
+    "width": 200,
     "height": 300,
     "encoding": {
         "x": {
