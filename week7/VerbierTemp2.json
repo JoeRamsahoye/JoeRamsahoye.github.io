@@ -11,7 +11,7 @@
         },
     "width": 300,
     "height": 300,
-    "data": {"url": "https://raw.githubusercontent.com/JoeRamsahoye/JoeRamsahoye.github.io/main/VerbierTemp.csv"},
+    "data": {"url": "https://raw.githubusercontent.com/JoeRamsahoye/JoeRamsahoye.github.io/main/week7/VerbierTemp.csv"},
     "encoding": {
       "x": {"field": "Month", "type": "nominal", "title": "Date", "axis": {"grid": false}},
       "y": {"type": "quantitative", "axis": {"title": "Max, Min and Average Temperature", "grid": false }}
