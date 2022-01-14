@@ -21,8 +21,8 @@
       }
     ],
     "config": {"background": "#e6edf0"},
-    "height": 320,
-    "width": 299,
+    "height": 300,
+    "width": 250,
     "mark": {
       "type": "arc",
       "innerRadius": 80,

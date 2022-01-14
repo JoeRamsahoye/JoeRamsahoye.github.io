@@ -12,7 +12,7 @@
     "subtitleColor": "black"
   },
   "height": 600,
-  "width": 350,
+  "width": 300,
   "data": {
     "url": "https://rest.coinapi.io/v1/ohlcv/DOGE/USD/history?period_id=3DAY&time_start=2021-01-10T00:00:00&limit=100000&include_empty_items=false&apikey=92B6B077-C0EF-434B-B876-82F597B782DF"
   },
