@@ -1,0 +1,88 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {"background": "#e6edf0"},
+  "title": {
+    "text": "Chart 5: Tesla Share Price",
+    "subtitle": "Weekly price at close in $ using AlphaVantage api source: alphavantage.com",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "width": 330,
+  "height": 320,
+  "data": {
+    "url": "https://raw.githubusercontent.com/JoeRamsahoye/JoeRamsahoye.github.io/main/TESLA.csv"
+  },
+  "transform": [
+    {"calculate": "'$'+datum.close", "as": "price_close_dollars"},
+    {"calculate": "'$'+datum.high", "as": "price_high_dollars"},
+    {"calculate": "'$'+datum.low", "as": "price_low_dollars"},
+    {
+      "calculate": "month(datum.timestamp)",
+      "as": "month_timestamp"
+    },
+    {"filter": "datum.month_timestamp>minMonth"},
+    {"filter": "datum.month_timestamp<maxMonth"}
+  ],
+  "params": [
+    {
+      "name": "minMonth",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 12,
+        "step": 1,
+        "name": "Start month:"
+      }
+    },
+    {
+      "name": "maxMonth",
+      "value": 12,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 12,
+        "step": 1,
+        "name": "End month:"
+      }
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "timestamp",
+      "type": "temporal",
+      "title": "Date",
+      "axis": {"grid": false, "title": "Date"}
+    },
+    "y": {
+      "type": "quantitative",
+      "scale": {"zero": false},
+      "axis": {"title": "Price", "grid": false}
+    },
+    "tooltip": [
+      {"field": "timestamp", "title": "Date", "type": "temporal"},
+      {"field": "volume", "title": "Volume", "type": "quantitative"},
+      {"field": "price_low_dollars", "title": "Low"},
+      {"field": "price_high_dollars", "title": "High"}
+    ],
+    "color": {
+      "condition": {
+        "test": "datum.open < datum.close",
+        "value": "skyblue"
+      },
+      "value": "#0f6d96"
+    }
+  },
+  "layer": [
+    {
+      "mark": "rule",
+      "encoding": {"y": {"field": "low"}, "y2": {"field": "high"}}
+    },
+    {
+      "mark": "bar",
+      "encoding": {"y": {"field": "open"}, "y2": {"field": "close"}}
+    }
+  ]
+}

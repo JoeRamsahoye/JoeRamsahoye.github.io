@@ -1,0 +1,43 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/JoeRamsahoye/JoeRamsahoye.github.io/main/MarketCap%20(1).csv",
+      "format": {"type": "csv"}
+    },
+    "title": {
+      "text": " Chart 3: Market Cap of Top Cryptocurrencies",
+      "subtitle": "Market Cap in $ scraped from coinmarketcap.com source: coinmarketcap.com",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "transform": [
+      {
+        "filter": {
+          "field": "Name",
+          "oneOf": ["Bitcoin", "Ethereum", "XRP", "Binance Coin", "ADA", "Solana", "Tether", "Dogecoin"]
+        }
+      }
+    ],
+    "config": {"background": "#e6edf0"},
+    "height": 300,
+    "width": 250,
+    "mark": {
+      "type": "arc",
+      "innerRadius": 80,
+      "stroke": "#2e2f2f",
+      "tooltip": true
+    },
+    "encoding": {
+      "theta": {"field": "Market Cap", "type": "quantitative"},
+      "color": {
+        "field": "Name",
+        "title": "Cryptocurrency",
+        "type": "nominal",
+        "scale": {"scheme": "darkblue"},
+        "sort": "ascending",
+        "legend": {"orient": "left", "fillColor": "#e6edf0", "padding": 3}
+      }
+    }
+  }

@@ -1,0 +1,93 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {"background": "#e6edf0"},
+  "description": "Bitcoin close",
+  "title": {
+    "text": " Chart 7: Bitcoin Price",
+    "subtitle": "Weekly price in $ using CoinApi's API source: CoinAPI.com",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black",
+    "subtitleColor": "black"
+  },
+  "width": 300,
+  "height": 300,
+  "data": {
+    "url": "https://rest.coinapi.io/v1/ohlcv/BTC/USD/history?period_id=7DAY&time_start=2021-02-06T00:00:00&limit=100000&include_empty_items=false&apikey=D7F1397B-3B55-467B-9C87-B9DBCFE00239"
+  },
+  "transform": [
+    {"calculate": "'$'+datum.price_close", "as": "price_close_dollars"},
+    {"calculate": "'$'+datum.price_high", "as": "price_high_dollars"},
+    {"calculate": "'$'+datum.price_low", "as": "price_low_dollars"},
+    {
+      "calculate": "month(datum.time_period_start)",
+      "as": "month_time_period_start"
+    },
+    {"filter": "datum.month_time_period_start>minMonth"},
+    {"filter": "datum.month_time_period_start<maxMonth"}
+  ],
+  "params": [
+    {
+      "name": "minMonth",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 12,
+        "step": 1,
+        "name": "Start month:"
+      }
+    },
+    {
+      "name": "maxMonth",
+      "value": 12,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 12,
+        "step": 1,
+        "name": "End month:"
+      }
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "time_period_start",
+      "type": "temporal",
+      "title": "Date",
+      "axis": {
+        "grid": false,
+        "title": "Date"
+      }
+    },
+    "y": {
+      "type": "quantitative",
+      "scale": {"zero": false},
+      "axis": {"title": "Price", "grid": false}
+    },
+    "tooltip": [
+      {"field": "time_period_start", "title": "Date", "type": "temporal"},
+      {"field": "volume_traded", "title": "Volume", "type": "quantitative"},
+      {"field": "price_low_dollars", "title": "Low"},
+      {"field": "price_high_dollars", "title": "High"}
+    ],
+    "color": {
+      "condition": {
+        "test": "datum.price_open < datum.price_close",
+        "value": "skyblue"
+      },
+      "value": "#0f6d96"
+    }
+  },
+  "layer": [
+    {
+      "mark": "rule",
+      "encoding": {"y": {"field": "price_low"}, "y2": {"field": "price_high"}}
+    },
+    {
+      "mark": "bar",
+      "encoding": {"y": {"field": "price_open"}, "y2": {"field": "price_close"}}
+    }
+  ]
+}
