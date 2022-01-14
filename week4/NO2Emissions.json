@@ -1,0 +1,51 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "config": {
+        "background": "#e6edf0",
+        "view": {
+            "stroke": "transparent"
+        }
+    },
+    "title": {
+        "text": "UK Nitrogen Dioxide",
+        "subtitle": "Average weekly NO2 emissions. Source: emissions-api.org",
+        "subtitleFontStyle": "italic",
+        "subtitleFontSize": 10,
+        "anchor": "start"
+    },
+    "data": {
+        "url": "https://api.v2.emissions-api.org/api/v2/nitrogendioxide/statistics.json?country=GB&interval=week&end=2021-11-01"
+    },
+    "mark": {
+        "type": "point"
+    },
+    "width": 250,
+    "height": 300,
+    "encoding": {
+        "x": {
+            "field": "time.interval_start",
+            "type": "temporal",
+            "title": "Month",
+            "axis": {
+                "grid": false
+            }
+        },
+        "y": {
+            "field": "value.average",
+            "type": "quantitative",
+            "title": "Emissions (mol/m2)",
+            "axis": {
+                "grid": false
+
+            }
+        },
+        "color": {
+            "field": "time.interval_start",
+            "timeUnit": "month",
+            "scale": {
+                "scheme": "darkblue"
+            },
+            "title": "Month"
+        }
+    }
+}
