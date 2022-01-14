@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {"background": "#e6edf0"},
+  "title": {
+    "text": "Average Number of Days Spent in ICU with COVID",
+    "subtitle":"Mean using the AFT Model, Source: BMCinfectdis.com",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "values": [
+      {"Age":"1 to 49", "Range of Weeks": "12-14 Weeks", "Number of Days":13},
+      {"Age":"1 to 49", "Range of Weeks": "15-20 Weeks", "Number of Days":10},
+      {"Age":"50 to 64", "Range of Weeks": "12-14 Weeks", "Number of Days":15.4},
+      {"Age":"50 to 64", "Range of Weeks": "15-20 Weeks", "Number of Days":12},
+      {"Age":"65 to 74", "Range of Weeks": "12-14 Weeks", "Number of Days":13.6},
+      {"Age":"65 to 74", "Range of Weeks": "15-20 Weeks", "Number of Days":10.4},
+      {"Age":"75+", "Range of Weeks": "12-14 Weeks", "Number of Days":7.6},
+      {"Age":"75+", "Range of Weeks": "15-20 Weeks", "Number of Days":5.5}
+    ]
+  },
+  "height": 260,
+  "width": 300,
+  "mark": "circle",
+  "encoding": {
+    "x": {
+      "field": "Age",
+      "axis": {"grid": false}},
+    "y": {"field": "Number of Days", "type": "quantitative", "axis": {"grid": false}},
+    "xOffset": {"field": "Range of Weeks"},
+    "color": {"field": "Range of Weeks", "legend": {"orient": "bottom-left", "fillColor": "#e6edf0"},
+    "type": "nominal",
+    "scale": {
+      "domain": ["12-14 Weeks", "15-20 Weeks"],
+      "scheme": "darkblue"
+    }}
+  }
+}
