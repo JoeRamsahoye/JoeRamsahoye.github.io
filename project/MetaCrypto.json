@@ -1,0 +1,81 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {"background": "#e6edf0"},
+  "title": {
+    "text": "Chart 1: Daily Cryptocurrency Returns",
+    "subtitle": "Daily returns for six high marketcap cryptocurrencies source: Binance.com ",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/JoeRamsahoye/JoeRamsahoye.github.io/main/project/ReturnsPlease.csv",
+    "format": {"type": "csv"}
+  },
+  "selection": {
+    "Cryptocurrency": {
+      "type": "single",
+      "fields": ["Cryptocurrency"],
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Bitcoin",
+          "Ethereum",
+          "Ripple",
+          "Cardano",
+          "Chainlink",
+          "Dogecoin"
+        ],
+        "name": "Pick a Coin: "
+      }
+    }
+  },
+  "transform": [
+    {"filter": {"selection": "Cryptocurrency"}},
+    {
+      "filter": {
+        "field": "Cryptocurrency", 
+        "oneOf": [
+          "Bitcoin",
+          "Ethereum",
+          "Ripple",
+          "Cardano",
+          "Chainlink",
+          "Dogecoin"
+        ]
+      }
+    }
+  ],
+  "height": 300,
+  "width":300,
+  "mark": {"type": "circle"},
+  "encoding": {
+    "x": {
+      "field": "Date",
+      "type": "temporal",
+      "title": "Date",
+      "axis": {"grid": false}
+    },
+    "y": {
+      "field": "Return",
+      "type": "quantitative",
+      "title": "Daily Return (%)",
+      "scale": {"domain": [-50, 100]},
+      "axis": {"grid": false}
+    },
+    "color": {
+      "field": "Cryptocurrency",
+      "type": "nominal",
+      "scale": {"scheme": "darkblue"},
+      "title": "Cryptocurrency",
+      "legend": {"orient": "top-left", "fillColor": "#e6edf0"}
+    },
+    "tooltip": [
+      {"field": "Cryptocurrency", "title": "Coin", "type": "ordinal"},
+      {"field": "Date", "title": "Date", "type": "temporal"},
+      {"field": "Return", "title": "Return (%)", "type": "quantitative"}
+    ]
+  }
+}
