@@ -8,6 +8,7 @@ footer {
   height: 100px
 }
 
+/*Title for the website*/
 header {
   font-family: "Comic Sans MS";
   font-size: 50px; 
@@ -17,9 +18,9 @@ header {
   text-align: center;  
 }
 
+/* Project reseach question title*/
 .Question
 {
-  /*font-family: 'Helvetica Neue', sans-serif;*/
   font-family: "Calibri";
   color: black;
   font-size: 40px; 
@@ -28,9 +29,8 @@ header {
   text-align: center;
 }
 
-
+/*Section headings*/
 .title1 {
-  /*font-family: 'Helvetica Neue', sans-serif;*/
   font-family: "Calibri";
   color: black;
   font-size: 20px; 
@@ -39,18 +39,8 @@ header {
   text-align: center;
 }
 
-.title2 {
-  /*font-family: 'Helvetica Neue', sans-serif;*/
-  font-family: "Comic Sans MS", "Comic Sans";
-  color: #ffffff;
-  font-size: 20px; 
-  letter-spacing: 1px; 
-  line-height: 1; 
-  text-align: center;
-}
-
+/*Paragraphs for the write up sections*/
 .title3 {
-  /*font-family: 'Helvetica Neue', sans-serif;*/
   font-family: "Calibri";
   color: black;
   font-size: 15px; 
@@ -59,16 +49,7 @@ header {
   text-align: center;
 }
 
-.para {
-  /*font-family: 'Helvetica Neue', sans-serif;*/
-  font-family: "Calibri";
-  color: black;
-  font-size: 15px; 
-  letter-spacing: 1px; 
-  line-height: 1; 
-  text-align: center, auto !important;
-}
-
+/*Customoizex text-link colour*/
 .textLink{
   color: #051077;
 }
@@ -77,18 +58,16 @@ header {
   font-weight:bold
 }
 
-.white {
+.blue {
   color: rgb(116, 209, 240);
 }
 
-.red {
+.purple {
   color: #051077;
 }
 
-/* My charts are given a different font to separate from the rest of the page. The borders and margins are of typical size. */
+/*Charts*/
 .chart {
-  /* Richard suggestion that ended up not working... display: flex; justify-content: center */
-  font-family: Georgia, Verdana, sans-serif;
   vertical-align: center;
   width: 400px;
   height: flex;
@@ -99,17 +78,7 @@ header {
   background-color: #e6edf0;
 }
 
-.bigchart {
-  font-family: Arial, Helvetica, sans-serif;
-  width: flex;
-  height: flex;
-  border: #e6edf0 solid 4px;
-  border-radius: 10px;
-  margin: 0px;
-  padding: 8px;
-  background-color: #e6edf0;
-}
-
+/*Tweets had slightly different coding to allow them to be stacked closer together*/
 .tweet {
   font-family: Arial, Helvetica, sans-serif;
   flex-flow: row wrap;
@@ -123,19 +92,6 @@ header {
   background-color: #e6edf0
 }
 
-.tweet1 {
-  font-family: Arial, Helvetica, sans-serif;
-  flex-flow: row wrap;
-  width: 290;
-  height: flex;
-  border: #e6edf0 solid 0px;
-  border-radius: 0px;
-  margin: 18px;
-  padding: 0px;
-  padding-top: 0px;
-  background-color: #e6edf0
-}
-
 
 .container {
   display: flex;
@@ -144,32 +100,7 @@ header {
   text-align: center;
 }
 
-.container2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-
-
-.wrapper {
-  border: 1px solid blue;
-}
-.div1 {
-  display: inline-block;
-  width:120px;
-  height:120px;
-  border: 1px solid red;
-}
-.div2 {
-  display: inline-block;
-  width:160px;
-  height:160px;
-  border: 1px solid green;
-}
-
-/* Button code */
+/* Button code inspired by various sources online */
 .button-74 {
 background-color: #e6edf0;
 border: 2px solid black;
@@ -223,7 +154,7 @@ user-select: none;
 touch-action: manipulation;
 }
 
-/* The below CSS is taken from Richard's page, and sets a different number of columns (of graphs) on the page depending on the size of the screen that is being used. */
+/* The below CSS is taken from RapidCharts, and sets a different number of columns (of graphs) on the page depending on the size of the screen that is being used. */
 /* E.g., a typical phone displays one column, and iPad displays two, and a typical computer screen displays three. */
 /* ------------------------------------------------------------------------------
 	DIFFERENT SCREEN SIZES
