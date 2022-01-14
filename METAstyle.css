@@ -85,14 +85,16 @@ header {
   color: #051077;
 }
 
+/* My charts are given a different font to separate from the rest of the page. The borders and margins are of typical size. */
 .chart {
-  font-family: Arial, Helvetica, sans-serif;
-  width: flex;
+  /* Richard suggestion that ended up not working... display: flex; justify-content: center */
+  font-family: Georgia, Verdana, sans-serif;
+  vertical-align: center;
+  width: 400px;
   height: flex;
-  gap: 30px 30px;
-  border: #e6edf0 solid 4px;
+  border: #4B0082 solid 3.5px;
   border-radius: 10px;
-  margin: 1px;
+  margin: 10px;
   padding: 8px;
   background-color: #e6edf0;
 }
@@ -221,47 +223,84 @@ user-select: none;
 touch-action: manipulation;
 }
 
-@media screen and (max-width: 959px) {
-  body {
-      overflow-x: hidden;
-      margin-left: 1%;
-      margin-right: 1%;
+/* The below CSS is taken from Richard's page, and sets a different number of columns (of graphs) on the page depending on the size of the screen that is being used. */
+/* E.g., a typical phone displays one column, and iPad displays two, and a typical computer screen displays three. */
+/* ------------------------------------------------------------------------------
+	DIFFERENT SCREEN SIZES
+-------------------------------------------------------------------------------*/
+
+/* One column*/
+@media only screen and (min-width: 250px) {
+  .grid_items {
+    grid-template-columns: 100%;
+    max-width: 420px; 
+    margin: 0 auto 0 auto !important;
+	padding: 0 5 0 5; 
+    grid-column-gap: 10px;
+    grid-row-gap: 40px;
+    text-align: center;
   }
-  h1 {
-      font-size: 20px;
+
+  .wrap {
+    grid-template-columns: 100%;
+    max-width: 360px; 
+    margin: 0 auto 0 auto !important;
+	  padding: 0 5 0 5; 
+    grid-column-gap: 10px;
+    grid-row-gap: 40px;
+    text-align: center;
   }
-  .chart {
-      width: 95%;
+  .grid_items > div {
+    padding: 10px;
   }
-  .chart1 {
-      width: 95%;
+  .rubric {
+    text-align: left;
   }
 }
 
-@media screen and (max-width: 640px) {
-  body {
-      overflow-x: hidden;
-      margin-left: 1%;
-      margin-right: 1%;
+/* Two columns*/
+@media only screen and (min-width: 900px) {
+  .grid_items, .wrap {
+    grid-template-columns: 47.5% 47.5%;
+    max-width: 880px; 
+    margin: 0 auto 0 auto !important;
+	padding: 0 5 0 5; 
+    grid-column-gap: 10px;
+    grid-row-gap: 40px;
+    text-align: left;
   }
-  .chart {
-      width: 95%;
-  }
-  .chart1 {
-      width: 95%;
+  .grid_items > div {
+    padding: 10px;
   }
 }
 
-@media screen and (max-width: 320px) {
-  body {
-      overflow-x: hidden;
-      margin-left: 1%;
-      margin-right: 1%;
+/* Three columns*/
+@media only screen and (min-width: 1400px) {
+  .grid_items, .wrap {
+    grid-template-columns: 30% 30% 30%;
+    max-width: 1400px; 
+    margin: 0 auto 0 auto !important;
+	padding: 0 5 0 5; 
+    grid-column-gap: 20px;
+    grid-row-gap: 50px;
   }
-  .chart {
-      width: 100%;
+  
+  .grid_items > div {
+    padding: 10px;
   }
-  .chart1 {
-      width: 100%;
+}
+
+/* Four columns*/
+@media only screen and (min-width: 1800px) {
+  .grid_items, .wrap {
+    grid-template-columns: 25% 25% 25% 25%;
+    max-width: 1900px; 
+    margin: 0 auto 0 auto !important;
+	padding: 0 5 0 5; 
+    grid-column-gap: 20px;
+    grid-row-gap: 50px;
+  }
+  .grid_items > div {
+    padding: 10px;
   }
 }
