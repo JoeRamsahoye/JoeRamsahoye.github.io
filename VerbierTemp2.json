@@ -9,7 +9,7 @@
           "anchor": "start",
           "color": "black"
         },
-    "width": 400,
+    "width": 300,
     "height": 300,
     "data": {"url": "https://raw.githubusercontent.com/JoeRamsahoye/JoeRamsahoye.github.io/main/VerbierTemp.csv"},
     "encoding": {
