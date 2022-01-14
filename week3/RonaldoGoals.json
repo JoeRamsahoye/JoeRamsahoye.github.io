@@ -1,0 +1,41 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {"background": "#e6edf0"},
+
+  "description": "Cristiano Ronaldo goals per season.",
+  "data": {
+    "values": [
+      {"Season": "14/15", "Number of Goals": 61}, {"Season": "15/16", "Number of Goals": 51}, {"Season": "16/17", "Number of Goals": 42},
+      {"Season": "17/18", "Number of Goals": 44}, {"Season": "18/19", "Number of Goals": 28}, {"Season": "19/20", "Number of Goals": 37},
+      {"Season": "20/21", "Number of Goals": 36} 
+      ]
+  },
+  "title": {
+      "text": "Cristiano Ronaldo goals per season",
+      "subtitle": "Coded by manually inputting data into json file", 
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+  },
+  "height": 300,
+  "width": 300,
+  "mark":{"type":"bar", "color": "#051077"},
+  "encoding": {
+    "x": {"field": "Season", 
+      "type": "nominal", 
+      "axis": {"labelAngle": 0}
+    },
+    "y": {"field": "Number of Goals", 
+      "type": "quantitative",
+      "axis": {"grid": false }
+    },
+    "color": {
+    "field": "Season",
+    "type": "nominal",
+    "scale": {"scheme": "darkblue"},
+    "title": null,
+    "legend": null
+  }
+  }
+}
