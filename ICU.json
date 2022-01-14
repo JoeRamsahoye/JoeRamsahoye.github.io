@@ -30,7 +30,7 @@
       "axis": {"grid": false}},
     "y": {"field": "Number of Days", "type": "quantitative", "axis": {"grid": false}},
     "xOffset": {"field": "Range of Weeks*"},
-    "color": {"field": "Range of Weeks*", "legend": {"orient": "bottom-left", "fillColor": "#e6edf0"},
+    "color": {"field": "Range of Weeks", "legend": {"orient": "bottom-left", "fillColor": "#e6edf0"},
     "type": "nominal",
     "scale": {
       "domain": ["12-14 Weeks", "15-20 Weeks"],
