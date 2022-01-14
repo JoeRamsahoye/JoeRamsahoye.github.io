@@ -1,0 +1,17 @@
+/* code used to merge csv files on my computer
+
+Last login: Sat Jan  8 17:44:18 on console
+joeramsahoye@Joes-MBP ~ % pwd
+/Users/joeramsahoye
+joeramsahoye@Joes-MBP ~ % cd /Users/joeramsahoye/Desktop/{Insert Ticker}
+joeramsahoye@Joes-MBP {Insert Ticker}% cat *.csv >{Insert Ticker}_Combined.csv
+joeramsahoye@Joes-MBP {Insert Ticker} % 
+
+/* example using XRP as the cryptocurrency 
+
+Last login: Sat Jan  8 17:44:18 on console
+joeramsahoye@Joes-MBP ~ % pwd
+/Users/joeramsahoye
+joeramsahoye@Joes-MBP ~ % cd /Users/joeramsahoye/Desktop/XRP
+joeramsahoye@Joes-MBP XRP % cat *.csv >XRP_Combined.csv
+joeramsahoye@Joes-MBP XRP % 
